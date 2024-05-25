@@ -1,1 +1,263 @@
-﻿<h1>Thanh</h1>
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Khám bệnh nhanh</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: "Roboto", sans-serif;
+            font-size: 16px;
+        }
+
+        .slot {
+            transition: background-color 0.3s, opacity 0.3s, transform 0.3s;
+        }
+
+            .slot:hover {
+                background-color: #e0f7fa;
+                transform: scale(1.05);
+            }
+
+                .slot:hover.dark {
+                    background-color: #4a5568;
+                    transform: scale(1.05);
+                }
+
+            .slot.selected {
+                background-color: #3182ce;
+                color: white;
+            }
+
+            .slot.dimmed {
+                opacity: 0.5;
+            }
+
+        .doctor-card {
+            background-color: #e0f7fa;
+            color: #2d3748;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+            .doctor-card.dark {
+                background-color: #2d3748;
+                color: #e0f7fa;
+            }
+
+            .doctor-card:hover {
+                transform: translateY(-10px);
+            }
+
+        .button {
+            /* background-color: #00796b; */
+            background-color: #3182ce;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s, transform 0.3s;
+        }
+
+            .button:hover {
+                background-color: #3182ce;
+                color: white;
+                transform: scale(1.05);
+            }
+
+        .navbar {
+            background-color: #FFFFFF;
+            color: #000000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+            /* .navbar a {
+            color: #000000;
+            text-decoration: none;
+            padding: 0 15px;
+            transition: background-color 0.3s, color 0.3s;
+            font-size: 14px;
+        }
+        .navbar a:hover {
+            background-color: #D3D3D3;
+            color: #3366CC;
+        } */
+            .navbar a {
+                color: #000000;
+                text-decoration: none;
+                padding: 10px 15px; /* Tăng padding để có thêm không gian */
+                transition: background-color 0.3s, color 0.3s, padding 0.3s;
+                font-size: 14px;
+                border-radius: 5px; /* Đặt border radius để có góc bo tròn */
+            }
+
+                .navbar a:hover {
+                    background-color: #d3d3d3;
+                    color: #3366cc;
+                    padding: 10px 20px; /* Tăng padding khi hover */
+                    border-radius: 10px; /* Tăng border radius khi hover */
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Thêm shadow để có hiệu ứng nổi bật */
+                }
+
+            .navbar .menu {
+                position: relative;
+                display: inline-block;
+            }
+
+            .navbar .menu-content {
+                display: none;
+                position: absolute;
+                background-color: #ffffff;
+                box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+                z-index: 1;
+            }
+
+            .navbar .menu:hover .menu-content {
+                display: block;
+            }
+
+            .navbar .menu-content a {
+                display: block;
+                padding: 10px 15px;
+                color: #2d3748;
+                font-size: 14px;
+            }
+
+                .navbar .menu-content a:hover {
+                    background-color: #e0f7fa;
+                }
+
+        .login-bt {
+            background-color: #1E90FF;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 dark:bg-zinc-900 text-gray-800 dark:text-gray-200">
+    <header class="navbar flex justify-between items-center p-4">
+        <div class="flex items-center">
+            <img src="https://via.placeholder.com/40"
+                 alt="Company Logo"
+                 class="mr-4" />
+            <span class="text-lg font-semibold">Phòng Khám Nha Khoa</span>
+        </div>
+        <nav class="flex items-center">
+            <div class="menu">
+                <a href="#" class="text-base">Đặt Khám</a>
+                <div class="menu-content rounded-md">
+                    <a href="#">Đặt Khám Bác Sĩ</a>
+                    <a href="#">Đặt Khám Phòng Khám</a>
+                </div>
+            </div>
+            <a href="#" class="text-base">Tư Vấn Trực Tuyến</a>
+            <a href="#" class="text-base">Tin Y Tế</a>
+
+        </nav>
+        <a href="#" class="login-bt">Đăng Nhập</a>
+    </header>
+
+    <div class="container mx-auto p-8">
+        <div class="bg-white dark:bg-zinc-800 p-8 rounded-lg shadow-lg flex flex-col lg:flex-row gap-8">
+            <div class="w-full lg:w-1/2 flex flex-col items-center">
+                <label for="date" class="text-lg mb-4 font-semibold">Chọn ngày:</label>
+                <input type="date"
+                       id="date"
+                       name="date"
+                       class="p-2 border border-zinc-300 rounded-md mb-6 focus:outline-none focus:ring focus:ring-zinc-400 dark:focus:ring-offset-zinc-800" />
+                <div class="grid grid-cols-3 gap-4">
+                    <div class="p-4 border border-zinc-300 rounded-md cursor-pointer slot dark:border-zinc-700"
+                         data-slot="1">
+                        <span class="block mb-2 text-lg font-semibold">Slot 1</span>
+                        <span class="block text-sm text-gray-600 dark:text-gray-400">9:00 AM - 10:00 AM</span>
+                    </div>
+                    <div class="p-4 border border-zinc-300 rounded-md cursor-pointer slot dark:border-zinc-700"
+                         data-slot="2">
+                        <span class="block mb-2 text-lg font-semibold">Slot 2</span>
+                        <span class="block text-sm text-gray-600 dark:text-gray-400">10:00 AM - 11:00 AM</span>
+                    </div>
+                    <div class="p-4 border border-zinc-300 rounded-md cursor-pointer slot dark:border-zinc-700"
+                         data-slot="3">
+                        <span class="block mb-2 text-lg font-semibold">Slot 3</span>
+                        <span class="block text-sm text-gray-600 dark:text-gray-400">11:00 AM - 12:00 PM</span>
+                    </div>
+                    <div class="p-4 border border-zinc-300 rounded-md cursor-pointer slot dark:border-zinc-700"
+                         data-slot="4">
+                        <span class="block mb-2 text-lg font-semibold">Slot 4</span>
+                        <span class="block text-sm text-gray-600 dark:text-gray-400">1:00 PM - 2:00 PM</span>
+                    </div>
+                    <div class="p-4 border border-zinc-300 rounded-md cursor-pointer slot dark:border-zinc-700"
+                         data-slot="5">
+                        <span class="block mb-2 text-lg font-semibold">Slot 5</span>
+                        <span class="block text-sm text-gray-600 dark:text-gray-400">2:00 PM - 3:00 PM</span>
+                    </div>
+                    <div class="p-4 border border-zinc-300 rounded-md cursor-pointer slot dark:border-zinc-700"
+                         data-slot="6">
+                        <span class="block mb-2 text-lg font-semibold">Slot 6</span>
+                        <span class="block text-sm text-gray-600 dark:text-gray-400">3:00 PM - 4:00 PM</span>
+                    </div>
+                </div>
+                <textarea class="p-2 border border-zinc-300 rounded-md mt-6 w-full focus:outline-none focus:ring focus:ring-zinc-400 dark:focus:ring-offset-zinc-800 dark:border-zinc-700"
+                          placeholder="Ghi mô tả"></textarea>
+                <button class="button mt-6">Xác nhận</button>
+            </div>
+            <div class="w-full lg:w-1/2 flex flex-col items-center">
+                <h2 class="text-2xl font-semibold mb-4">Thông tin bác sĩ</h2>
+                <div class="doctor-card p-6 rounded-lg shadow-md w-full flex flex-col items-center text-center">
+                    <img src="https://via.placeholder.com/150"
+                         alt="Doctor Image"
+                         class="rounded-full mb-4 w-32 h-32" />
+                    <h3 class="text-xl font-semibold mb-2">Dr. Nguyễn Văn A</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">
+                        Chuyên khoa: Nha khoa
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">
+                        Dr. Nguyễn Văn A là một chuyên gia hàng đầu trong lĩnh vực nha
+                        khoa với hơn 20 năm kinh nghiệm. Ông đã điều trị và tư vấn cho
+                        hàng ngàn bệnh nhân.
+                    </p>
+                    <a href="#" class="button mt-4">Xem thêm</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+      document.querySelectorAll(".slot").forEach((slot) => {
+        slot.addEventListener("click", function () {
+          // Kiểm tra nếu slot này đã được chọn thì bỏ chọn
+          if (this.classList.contains("selected")) {
+            this.classList.remove("selected");
+            // Bỏ lớp dimmed khỏi tất cả các slot
+            document.querySelectorAll(".slot").forEach((s) => {
+              s.classList.remove("dimmed");
+            });
+          } else {
+            // Xóa lớp selected và dimmed khỏi tất cả các slot
+            document.querySelectorAll(".slot").forEach((s) => {
+              s.classList.remove("selected");
+              s.classList.remove("dimmed");
+            });
+
+            // Thêm lớp selected vào slot được chọn
+            this.classList.add("selected");
+
+            // Thêm lớp dimmed vào các slot không được chọn
+            document.querySelectorAll(".slot").forEach((s) => {
+              if (!s.classList.contains("selected")) {
+                s.classList.add("dimmed");
+              }
+            });
+          }
+        });
+
+        // Thêm lớp dark khi chế độ tối được bật
+        slot.addEventListener("mouseover", function () {
+          if (document.documentElement.classList.contains("dark")) {
+            this.classList.add("dark");
+          }
+        });
+
+        slot.addEventListener("mouseout", function () {
+          this.classList.remove("dark");
+        });
+      });
+    </script>
+</body>
+</html>
