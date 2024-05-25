@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -69,6 +70,7 @@
             color: #000000;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
+
             /* .navbar a {
             color: #000000;
             text-decoration: none;
@@ -83,18 +85,23 @@
             .navbar a {
                 color: #000000;
                 text-decoration: none;
-                padding: 10px 15px; /* Tăng padding để có thêm không gian */
+                padding: 10px 15px;
+                /* Tăng padding để có thêm không gian */
                 transition: background-color 0.3s, color 0.3s, padding 0.3s;
                 font-size: 14px;
-                border-radius: 5px; /* Đặt border radius để có góc bo tròn */
+                border-radius: 5px;
+                /* Đặt border radius để có góc bo tròn */
             }
 
                 .navbar a:hover {
                     background-color: #d3d3d3;
                     color: #3366cc;
-                    padding: 10px 20px; /* Tăng padding khi hover */
-                    border-radius: 10px; /* Tăng border radius khi hover */
-                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Thêm shadow để có hiệu ứng nổi bật */
+                    padding: 10px 20px;
+                    /* Tăng padding khi hover */
+                    border-radius: 10px;
+                    /* Tăng border radius khi hover */
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                    /* Thêm shadow để có hiệu ứng nổi bật */
                 }
 
             .navbar .menu {
@@ -130,20 +137,21 @@
         }
     </style>
 </head>
-<body class="bg-gray-100 dark:bg-zinc-900 text-gray-800 dark:text-gray-200">
+
+<!-- <body class="bg-gray-100 dark:bg-zinc-900 text-gray-800 dark:text-gray-200"> -->
+
+<body>
     <header class="navbar flex justify-between items-center p-4">
         <div class="flex items-center">
-            <img src="https://via.placeholder.com/40"
-                 alt="Company Logo"
-                 class="mr-4" />
+            <img src="https://via.placeholder.com/40" alt="Company Logo" class="mr-4" />
             <span class="text-lg font-semibold">Phòng Khám Nha Khoa</span>
         </div>
         <nav class="flex items-center">
             <div class="menu">
                 <a href="#" class="text-base">Đặt Khám</a>
-                <div class="menu-content rounded-md">
-                    <a href="#">Đặt Khám Bác Sĩ</a>
-                    <a href="#">Đặt Khám Phòng Khám</a>
+                <div class="menu-content rounded-md" style="width: 200px;">
+                    <a href="#" style="font-size: 15px;">Đặt Khám Bác Sĩ</a>
+                    <a href="#" style="font-size: 15px;">Đặt Khám Phòng Khám</a>
                 </div>
             </div>
             <a href="#" class="text-base">Tư Vấn Trực Tuyến</a>
@@ -154,12 +162,11 @@
     </header>
 
     <div class="container mx-auto p-8">
-        <div class="bg-white dark:bg-zinc-800 p-8 rounded-lg shadow-lg flex flex-col lg:flex-row gap-8">
+        <!-- <div class="bg-white dark:bg-zinc-800 p-8 rounded-lg shadow-lg flex flex-col lg:flex-row gap-8"> -->
+        <div class="p-8 rounded-lg shadow-lg flex flex-col lg:flex-row gap-8">
             <div class="w-full lg:w-1/2 flex flex-col items-center">
                 <label for="date" class="text-lg mb-4 font-semibold">Chọn ngày:</label>
-                <input type="date"
-                       id="date"
-                       name="date"
+                <input type="date" id="date" name="date"
                        class="p-2 border border-zinc-300 rounded-md mb-6 focus:outline-none focus:ring focus:ring-zinc-400 dark:focus:ring-offset-zinc-800" />
                 <div class="grid grid-cols-3 gap-4">
                     <div class="p-4 border border-zinc-300 rounded-md cursor-pointer slot dark:border-zinc-700"
@@ -200,14 +207,15 @@
             <div class="w-full lg:w-1/2 flex flex-col items-center">
                 <h2 class="text-2xl font-semibold mb-4">Thông tin bác sĩ</h2>
                 <div class="doctor-card p-6 rounded-lg shadow-md w-full flex flex-col items-center text-center">
-                    <img src="https://via.placeholder.com/150"
-                         alt="Doctor Image"
-                         class="rounded-full mb-4 w-32 h-32" />
+                    <img src="https://htmediagroup.vn/wp-content/uploads/2022/08/Anh-profile-bac-si-min.jpg"
+                         alt="Doctor Image" class="rounded-full mb-4 w-32 h-32" />
                     <h3 class="text-xl font-semibold mb-2">Dr. Nguyễn Văn A</h3>
-                    <p class="text-gray-600 dark:text-gray-300 mb-4">
+                    <!-- <p class="text-gray-600 dark:text-gray-300 mb-4"> -->
+                    <p class="mb-4">
                         Chuyên khoa: Nha khoa
                     </p>
-                    <p class="text-gray-600 dark:text-gray-300 mb-4">
+                    <!-- <p class="text-gray-600 dark:text-gray-300 mb-4"> -->
+                    <p class="mb-4">
                         Dr. Nguyễn Văn A là một chuyên gia hàng đầu trong lĩnh vực nha
                         khoa với hơn 20 năm kinh nghiệm. Ông đã điều trị và tư vấn cho
                         hàng ngàn bệnh nhân.
@@ -219,45 +227,45 @@
     </div>
 
     <script>
-      document.querySelectorAll(".slot").forEach((slot) => {
-        slot.addEventListener("click", function () {
-          // Kiểm tra nếu slot này đã được chọn thì bỏ chọn
-          if (this.classList.contains("selected")) {
-            this.classList.remove("selected");
-            // Bỏ lớp dimmed khỏi tất cả các slot
-            document.querySelectorAll(".slot").forEach((s) => {
-              s.classList.remove("dimmed");
+        document.querySelectorAll(".slot").forEach((slot) => {
+            slot.addEventListener("click", function () {
+                // Kiểm tra nếu slot này đã được chọn thì bỏ chọn
+                if (this.classList.contains("selected")) {
+                    this.classList.remove("selected");
+                    // Bỏ lớp dimmed khỏi tất cả các slot
+                    document.querySelectorAll(".slot").forEach((s) => {
+                        s.classList.remove("dimmed");
+                    });
+                } else {
+                    // Xóa lớp selected và dimmed khỏi tất cả các slot
+                    document.querySelectorAll(".slot").forEach((s) => {
+                        s.classList.remove("selected");
+                        s.classList.remove("dimmed");
+                    });
+
+                    // Thêm lớp selected vào slot được chọn
+                    this.classList.add("selected");
+
+                    // Thêm lớp dimmed vào các slot không được chọn
+                    document.querySelectorAll(".slot").forEach((s) => {
+                        if (!s.classList.contains("selected")) {
+                            s.classList.add("dimmed");
+                        }
+                    });
+                }
             });
-          } else {
-            // Xóa lớp selected và dimmed khỏi tất cả các slot
-            document.querySelectorAll(".slot").forEach((s) => {
-              s.classList.remove("selected");
-              s.classList.remove("dimmed");
+
+            // Thêm lớp dark khi chế độ tối được bật
+            slot.addEventListener("mouseover", function () {
+                if (document.documentElement.classList.contains("dark")) {
+                    this.classList.add("dark");
+                }
             });
 
-            // Thêm lớp selected vào slot được chọn
-            this.classList.add("selected");
-
-            // Thêm lớp dimmed vào các slot không được chọn
-            document.querySelectorAll(".slot").forEach((s) => {
-              if (!s.classList.contains("selected")) {
-                s.classList.add("dimmed");
-              }
+            slot.addEventListener("mouseout", function () {
+                this.classList.remove("dark");
             });
-          }
         });
-
-        // Thêm lớp dark khi chế độ tối được bật
-        slot.addEventListener("mouseover", function () {
-          if (document.documentElement.classList.contains("dark")) {
-            this.classList.add("dark");
-          }
-        });
-
-        slot.addEventListener("mouseout", function () {
-          this.classList.remove("dark");
-        });
-      });
     </script>
 </body>
 </html>
