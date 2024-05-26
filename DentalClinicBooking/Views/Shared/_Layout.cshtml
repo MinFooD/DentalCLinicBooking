@@ -2,2186 +2,2263 @@
 
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="initial-scale=1, width=device-width" />
-
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
-    />
-
-    <style>
-      .image-2-icon {
-        height: 48px;
-        width: 58px;
-        position: relative;
-        object-fit: cover;
-        flex-shrink: 0;
-      }
-      .sun {
-        font-weight: 500;
-      }
-      .shine {
-        color: var(--color-deepskyblue-100);
-      }
-      .sunshine {
-        margin: 0;
-        align-self: stretch;
-        position: relative;
-        font-size: inherit;
-        flex-shrink: 0;
-        debug_commit: bf4bc93;
-        white-space: nowrap;
-        font-family: inherit;
-      }
-      .image-2-parent,
-      .sunshine-wrapper {
-        display: flex;
-        align-items: flex-start;
-        justify-content: flex-start;
-      }
-      .sunshine-wrapper {   
-        flex: 1;
-        flex-direction: column;
-        padding: 5px 0 0;
-      }
-      .image-2-parent {
-        width: 252.8px;
-        flex-direction: row;
-        gap: 5px;
-      }
-      .t-vn-trc {
-        position: relative;
-        white-space: nowrap;
-      }
-      .t-vn-trc-tuyn-wrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        padding: 0 19px 0 0;
-      }
-      .t-khm,
-      .tin-y-t {
-        position: relative;
-        display: inline-block;
-        min-width: 68px;
-        white-space: nowrap;
-      }
-      .t-khm {
-        min-width: 90px;
-      }
-      .frame-group,
-      .frame-wrapper {
-        display: flex;
-        align-items: flex-start;
-        max-width: 100%;
-      }
-      .frame-group {
-        width: 461px;
-        flex-direction: row;
-        justify-content: space-between;
-        gap: var(--gap-xl);
-      }
-      .frame-wrapper {
-        width: 551.8px;
-        flex-direction: column;
-        justify-content: flex-end;
-        padding: 0 0 12px;
-        box-sizing: border-box;
-        font-size: var(--body-text-size);
-        color: var(--color-dimgray);
-      }
-      .buttonsignup-child {
-        height: 45px;
-        width: 150px;
-        position: relative;
-        border-radius: var(--br-31xl);
-        border: 1px solid var(--color-deepskyblue-100);
-        box-sizing: border-box;
-        display: none;
-      }
-      .ng-nhp {
-        position: relative;
-        font-size: var(--font-size-base);
-        font-weight: 500;
-        font-family: var(--font-rubik);
-        color: var(--color-deepskyblue-100);
-        text-align: left;
-        display: inline-block;
-        min-width: 83px;
-        z-index: 1;
-      }
-      .buttonsignup,
-      .frame-parent {
-        display: flex;
-        flex-direction: row;
-      }
-      .buttonsignup {
-        cursor: pointer;
-        border: 1px solid var(--color-deepskyblue-100);
-        padding: 13px 33px 9px;
-        background-color: transparent;
-        border-radius: var(--br-31xl);
-        align-items: flex-start;
-        justify-content: flex-start;
-        white-space: nowrap;
-      }
-      .buttonsignup:hover {
-        background-color: rgba(0, 166, 230, 0.09);
-        border: 1px solid var(--color-deepskyblue-200);
-        box-sizing: border-box;
-      }
-      .frame-parent {
-        margin: 0px auto;
-        width: 1581px;
-        align-items: flex-end;
-        justify-content: space-between;
-        padding: 0 var(--padding-xl) 0 0;
-        box-sizing: border-box;
-        gap: var(--gap-xl);
-        max-width: 100%;
-        text-align: left;
-        font-size: 32px;
-        color: #0b132a;
-        font-family: var(--font-rubik);
-      }
-      .pages {
-        width: 49px;
-        height: 1px;
-        display: none;
-      }
-      .waitlist-child {
-        margin-left: -75px;
-        margin-bottom: 58px;
-        width: 1674px;
-        height: 1px;
-        position: relative;
-        object-fit: contain;
-        max-width: 105%;
-        flex-shrink: 0;
-      }
-      .ng-dng-t {
-        margin: 0;
-        align-self: stretch;
-        position: relative;
-        font-size: inherit;
-        letter-spacing: -0.02em;
-        font-weight: 700;
-        font-family: inherit;
-      }
-      .span {
-        color: var(--color-white);
-      }
-      .t-khm-vi-hn-600-bc-s-25 {
-        margin: 0;
-      }
-      .label,
-      .t-khm-vi-container {
-        position: relative;
-        line-height: 150%;
-      }
-      .t-khm-vi-container {
-        align-self: stretch;
-        height: 108px;
-        font-size: var(--subheading-size);
-        display: flex;
-        align-items: center;
-      }
-      .label {
-        width: 150px;
-        border: 0;
-        outline: 0;
-        font-weight: 500;
-        font-family: var(--body-text);
-        font-size: var(--body-text-size);
-        background-color: transparent;
-        height: 30px;
-        color: #828282;
-        text-align: left;
-        display: inline-block;
-        padding: 0;
-      }
-      .field {
-        flex: 1;
-        box-shadow: var(--button-shadow);
-        border-radius: var(--br-5xs);
-        background-color: var(--color-white);
-        border: 1px solid #e0e0e0;
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: flex-start;
-        padding: 14px var(--padding-base);
-        min-width: 150px;
-        max-width: 100%;
-      }
-      .tm-kim {
-        position: relative;
-        font-size: var(--body-text-size);
-        line-height: 150%;
-        font-weight: 500;
-        font-family: var(--body-text);
-        color: var(--color-white);
-        text-align: left;
-        display: inline-block;
-        min-width: 87px;
-      }
-      .button-new,
-      .copy,
-      .submit-button {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .button-new {
-        cursor: pointer;
-        border: 0;
-        padding: var(--padding-base) 18px;
-        background-color: var(--color-deepskyblue-100);
-        box-shadow: var(--button-shadow);
-        border-radius: var(--br-5xs);
-        flex-direction: row;
-        white-space: nowrap;
-      }
-      .button-new:hover {
-        background-color: var(--color-deepskyblue-200);
-      }
-      .copy,
-      .submit-button {
-        max-width: 100%;
-      }
-      .submit-button {
-        width: 467px;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 16px;
-      }
-      .copy {
-        width: 966.5px;
-        flex-direction: column;
-        gap: var(--spacing-s);
-      }
-      /* *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      } */
-      .copy-wrapper,
-      .waitlist {
-        margin: 0 auto;
-        display: flex;
-        align-items: flex-start;
-        box-sizing: border-box;
-      }
-      .copy-wrapper {
-        width: 1546.5px;
-        flex-direction: row;
-        justify-content: center;
-        padding: 0 var(--padding-xl);
-        max-width: 100%;
-        text-align: center;
-        font-size: var(--title-size);
-        color: var(--color-black);
-        font-family: var(--body-text);
-      }
-      .waitlist {
-        width: 100%;
-        position: relative;
-        background-color: var(--color-white);
-        overflow: hidden;
-        flex-direction: column;
-        justify-content: flex-start;
-        /* padding: 70px 0 70px 0px; */
-        gap: var(--gap-5xl);
-        line-height: normal;
-        letter-spacing: normal;
-      }
-      @@media screen and (max-width: 1200px) {
-        .waitlist {
-          /* padding-left: 27px; */
-          padding: 0px;
-          box-sizing: border-box;
-        }
-      }
-      @@media screen and (max-width: 1050px) {
-        .frame-group {
-          display: none;
-        }
-        .frame-wrapper {
-          width: 90.79999999999995px;
-        }
-        .ng-dng-t {
-          font-size: 51px;
-        }
-      }
-      @@media screen and (max-width: 450px) {
-        .t-vn-trc {
-          display: none;
-        }
-        .ng-dng-t {
-          font-size: 38px;
-        }
-        .t-khm-vi-container {
-          font-size: 19px;
-          line-height: 29px;
-        }
-        .label {
-          font-size: var(--font-size-base);
-          line-height: 24px;
-        }
-      }
-    </style>
-
-    <style>
-      body {
-        margin: 0;
-        line-height: normal;
-      }
-
-      :root {
-        /* fonts */
-        --body-text: Inter;
-        --font-rubik: Rubik;
-
-        /* font sizes */
-        --body-text-size: 20px;
-        --font-size-base: 16px;
-        --subheading-size: 24px;
-        --title-size: 64px;
-
-        /* Colors */
-        --color-white: #fff;
-        --color-deepskyblue-100: #00bfff;
-        --color-deepskyblue-200: #00a6e6;
-        --color-black: #000;
-        --color-dimgray: #4f5665;
-
-        /* Spacing */
-        --spacing-s: 24px;
-
-        /* Gaps */
-        --gap-5xl: 24px;
-        --gap-xl: 20px;
-
-        /* Paddings */
-        --padding-xl: 20px;
-        --padding-base: 16px;
-
-        /* Border radiuses */
-        --br-5xs: 8px;
-        --br-31xl: 50px;
-
-        /* Effects */
-        --button-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
-      }
-    </style>
-
-    <style>
-      .top-bar {
-        display: flex;
-        gap: 16px;
-        align-items: center;
-        width: 100%;
-        flex-direction: row;
-        color: var(--headline-color);
-      }
-
-      .top-bar h2 {
-        font-size: 1.2rem;
-        font-weight: 700;
-        line-height: 1.5rem;
-      }
-
-      .top-bar svg {
-        color: var(--headline-color);
-      }
-
-      .action-buttons {
-        position: relative;
-        display: inline-flex;
-        flex: 0 0 auto;
-        gap: 8px;
-        scroll-snap-align: start;
-        width: 100%;
-        flex-wrap: wrap;
-      }
-
-      .action-button {
-        color: #163300;
-        border-radius: 16px;
-        height: 32px;
-        gap: 4px;
-        cursor: pointer;
-        display: flex;
-        padding: 0 12px;
-        font-weight: 600;
-        transition: all 0.2s ease-in-out;
-        white-space: nowrap;
-        align-items: center;
-        text-decoration: none;
-        background: var(--secondary);
-      }
-
-      .action-button--primary:active {
-        background: var(--accent-active);
-      }
-
-      .action-button:active {
-        background: var(--secondary-active);
-      }
-
-      .action-button--horizontal-scroll {
-        border-radius: 50%;
-        cursor: pointer;
-        border: none;
-        outline: none;
-        width: 32px;
-        height: 32px;
-        background: var(--accent);
-      }
-
-      .action-button--horizontal-scroll:hover {
-        background: var(--accent-hover);
-      }
-
-      .action-button--horizontal-scroll:active {
-        background: var(--accent-active);
-      }
-
-      .action-button--horizontal-scroll:disabled {
-        cursor: not-allowed;
-        background: var(--secondary);
-      }
-
-      .action-button--horizontal-scroll:disabled:hover {
-        background: var(--secondary);
-      }
-
-      .action-button--horizontal-scroll:disabled:active {
-        background: var(--secondary);
-      }
-
-      #action-button--previous {
-        margin-left: auto;
-        transform: rotate(-90deg);
-      }
-
-      #action-button--next {
-        transform: rotate(90deg);
-      }
-
-      .action-button:hover {
-        background: var(--secondary-hover);
-      }
-
-      .action-button--primary {
-        background: var(--accent);
-      }
-
-      .action-button--primary:hover {
-        background: var(--accent-hover);
-      }
-
-      .action-button--primary:active {
-        background: var(--accent-active);
-      }
-
-      #events {
-        display: flex;
-        gap: 1.5rem;
-        padding: 1rem 0px;
-        width: 100%;
-        flex-direction: row;
-        overflow: auto;
-      }
-
-      .event {
-        appearance: none;
-        text-decoration: none;
-        position: relative;
-        transition: all 0.2s ease-in-out;
-        min-width: 320px;
-        cursor: pointer;
-        flex-direction: column;
-        justify-content: space-between;
-        scroll-snap-align: start;
-        overflow: hidden;
-        color: rgba(29, 32, 59, 1);
-      }
-
-      .event__image {
-        position: relative;
-      }
-
-      .event__indicator {
-        position: absolute;
-        padding: 0.5rem;
-        min-width: 3.5rem;
-        min-height: 3.5rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        background: var(--white);
-        align-items: center;
-        border-radius: 0.5rem;
-      }
-
-      .event__date {
-        top: 0.5rem;
-        left: 0.5rem;
-        font-size: 1.35rem;
-      }
-
-      .event__date__month {
-        font-size: 0.6rem;
-        text-transform: uppercase;
-        font-weight: bold;
-        color: var(--event-headline);
-      }
-
-      .event__type {
-        top: 0.5rem;
-        right: 0.5rem;
-      }
-
-      .event__type svg {
-        color: var(--event-text);
-        height: 2rem;
-        width: 2rem;
-      }
-
-      .event-description {
-        color: var(--event-text);
-        padding: 0.5rem 0.75rem;
-      }
-
-      .event img {
-        width: 100%;
-        height: 250px;
-        border-radius: 1rem;
-        object-fit: cover;
-        object-position: top;
-      }
-
-      .event h2 {
-        font-size: 1.375rem;
-        letter-spacing: normal;
-        overflow-wrap: normal;
-        white-space: nowrap;
-        font-weight: 700;
-        line-height: 1.25rem;
-        color: var(--event-headline);
-        overflow: hidden;
-        text-overflow: ellipsis;
-      }
-
-      .bottom-stats {
-        display: flex;
-        justify-content: space-between;
-        gap: 1rem;
-        width: 100%;
-        flex-direction: row;
-        color: var(--headline-color);
-      }
-
-      .bottom-stat {
-        display: flex;
-        gap: 0.5rem;
-        align-items: center;
-        flex-direction: row;
-      }
-
-      .container {
-        max-width: 1200px;
-        width: 100%;
-        min-width: 300px;
-        margin: 50px auto;
-      }
-
-      .circle {
-        height: 0.5rem;
-        width: 0.5rem;
-        border-radius: 50%;
-      }
-
-      .circle--green {
-        background: var(--success);
-      }
-
-      .circle--red {
-        background: var(--error);
-      }
-    </style>
-
-    <style>
-      body {
-        margin: 0;
-        line-height: normal;
-      }
-    </style>
-    <style>
-      .image-6-icon {
-        width: 27px;
-        height: 29px;
-        position: absolute;
-        margin: 0 !important;
-        top: 518px;
-        right: 598px;
-        object-fit: cover;
-      }
-      .image-2-icon2 {
-        height: 48px;
-        width: 58px;
-        position: relative;
-        object-fit: cover;
-        flex-shrink: 0;
-        debug_commit: bf4bc93;
-      }
-      .sun2 {
-        font-weight: 500;
-      }
-      .shine2 {
-        color: var(--color-deepskyblue-100);
-      }
-      .sunshine2 {
-        margin: 0;
-        align-self: stretch;
-        position: relative;
-        font-size: inherit;
-        flex-shrink: 0;
-        debug_commit: bf4bc93;
-        white-space: nowrap;
-        font-family: inherit;
-      }
-      .sunshine-container {
-        flex: 1;
-        flex-direction: column;
-        justify-content: flex-start;
-        padding: var(--padding-8xs) 0 0;
-      }
-      .frame-wrapper6,
-      .image-2-group,
-      .sunshine-container {
-        display: flex;
-        align-items: flex-start;
-      }
-      .image-2-group {
-        align-self: stretch;
-        flex-direction: row;
-        justify-content: flex-start;
-        gap: var(--gap-8xs);
-      }
-      .frame-wrapper6 {
-        width: 252.8px;
-        flex-direction: column;
-        justify-content: flex-end;
-        padding: 0 0 var(--padding-12xs);
-        box-sizing: border-box;
-      }
-      .t-vn-trc2,
-      .tin-y-t2 {
-        position: relative;
-        white-space: nowrap;
-      }
-      .tin-y-t2 {
-        display: inline-block;
-        min-width: 68px;
-      }
-      .tin-y-t-wrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        padding: var(--padding-12xs) 0 0;
-      }
-      .t-khm1 {
-        position: relative;
-        display: inline-block;
-        min-width: 90px;
-        white-space: nowrap;
-      }
-      .frame-wrapper7,
-      .t-vn-trc-tuyn-group {
-        display: flex;
-        align-items: flex-start;
-        box-sizing: border-box;
-        max-width: 100%;
-      }
-      .t-vn-trc-tuyn-group {
-        width: 480px;
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 0 var(--padding-xl) 0 0;
-        gap: var(--gap-xl);
-      }
-      .frame-wrapper7 {
-        width: 592.8px;
-        flex-direction: column;
-        justify-content: flex-end;
-        padding: 0 0 var(--padding-xs);
-        font-size: var(--body-text-size);
-        color: var(--color-dimgray);
-      }
-      .ng-k1 {
-        position: relative;
-        font-weight: 500;
-        display: inline-block;
-        min-width: 58px;
-        white-space: nowrap;
-      }
-      .ng-k-wrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        padding: var(--padding-smi) 0 0;
-      }
-      .buttonsignup-inner {
-        height: 45px;
-        width: 150px;
-        position: relative;
-        border-radius: var(--br-31xl);
-        border: 1px solid var(--color-deepskyblue-100);
-        box-sizing: border-box;
-        display: none;
-      }
-      .ng-nhp1 {
-        position: relative;
-        font-size: var(--font-size-base);
-        font-weight: 500;
-        font-family: var(--font-rubik);
-        color: var(--color-deepskyblue-100);
-        text-align: left;
-        display: inline-block;
-        min-width: 83px;
-        z-index: 1;
-      }
-      .buttonsignup2,
-      .frame-parent8 {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        justify-content: flex-start;
-      }
-      .buttonsignup2 {
-        cursor: pointer;
-        border: 1px solid var(--color-deepskyblue-100);
-        padding: 11px var(--padding-14xl);
-        background-color: transparent;
-        border-radius: var(--br-31xl);
-        white-space: nowrap;
-      }
-      .buttonsignup2:hover {
-        background-color: var(--color-deepskyblue-300);
-        border: 1px solid var(--color-deepskyblue-200);
-        box-sizing: border-box;
-      }
-      .frame-parent8 {
-        gap: var(--gap-6xl);
-        font-size: var(--font-size-base);
-      }
-      .auth-inner,
-      .frame-header {
-        display: flex;
-        flex-direction: row;
-        max-width: 100%;
-      }
-      .frame-header {
-        flex: 1;
-        align-items: flex-end;
-        justify-content: space-between;
-        gap: var(--gap-xl);
-        text-align: left;
-        font-size: var(--font-size-13xl);
-        color: var(--color-gray-200);
-        font-family: var(--font-rubik);
-      }
-      .auth-inner {
-        align-self: stretch;
-        align-items: flex-start;
-        justify-content: flex-end;
-        padding: 0 var(--padding-5xs) 0 var(--padding-smi);
-        box-sizing: border-box;
-      }
-      .image-1-icon,
-      .image-7-icon {
-        position: relative;
-        object-fit: cover;
-      }
-      .image-7-icon {
-        height: 583px;
-        flex: 1;
-        border-radius: 180px;
-        max-width: 100%;
-        overflow: hidden;
-        min-width: 374px;
-      }
-      .image-1-icon {
-        width: 45px;
-        height: 46px;
-      }
-      .image-1-wrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        padding: var(--padding-6xs) 0 0;
-      }
-      .ng-k2 {
-        margin: 0;
-        position: relative;
-        font-size: inherit;
-        line-height: 150%;
-        font-weight: 300;
-        font-family: inherit;
-      }
-      .frame-inner {
-        align-self: stretch;
-        height: 1px;
-        position: relative;
-        max-width: 100%;
-        overflow: hidden;
-        flex-shrink: 0;
-        z-index: 1;
-      }
-      .ng-k-parent {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-      }
-      .frame-parent10,
-      .frame-wrapper9 {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-      }
-      .frame-parent10 {
-        width: 215px;
-        justify-content: flex-start;
-        gap: var(--gap-mid);
-      }
-      .frame-wrapper9 {
-        width: 489px;
-        justify-content: center;
-        padding: 0 var(--padding-xl);
-        box-sizing: border-box;
-        max-width: 100%;
-      }
-      .gmail,
-      .m-otp-s {
-        position: relative;
-      }
-      .gmail {
-        width: 71px;
-        line-height: 32px;
-        font-weight: 500;
-        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-          #000;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        display: inline-block;
-        flex-shrink: 0;
-        backdrop-filter: blur(4px);
-        z-index: 1;
-      }
-      .m-otp-s {
-        align-self: stretch;
-        line-height: 150%;
-      }
-      .gmail-parent,
-      .m-otp-s-c-gi-n-gmail-n-wrapper {
-        display: flex;
-        align-items: flex-start;
-        justify-content: flex-start;
-        max-width: 100%;
-      }
-      .m-otp-s-c-gi-n-gmail-n-wrapper {
-        flex: 1;
-        flex-direction: column;
-        padding: 2px 0 0;
-        box-sizing: border-box;
-        min-width: 318px;
-        font-size: var(--font-size-base);
-      }
-      .gmail-parent {
-        align-self: stretch;
-        flex-direction: row;
-        row-gap: 20px;
-      }
-      .label1 {
-        width: 384px;
-        border: 0;
-        outline: 0;
-        font-weight: 500;
-        font-family: var(--body-text);
-        font-size: var(--body-text-size);
-        background-color: transparent;
-        height: 30px;
-        position: relative;
-        line-height: 150%;
-        color: var(--color-gray-100);
-        text-align: left;
-        display: inline-block;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        max-width: 100%;
-        padding: 0;
-      }
-      .field1,
-      .frame-parent13 {
-        display: flex;
-        align-items: flex-start;
-        justify-content: flex-start;
-        max-width: 100%;
-      }
-      .field1 {
-        width: 489px;
-        border-radius: var(--br-5xs);
-        background-color: var(--color-white);
-        border: 1px solid var(--color-gainsboro-300);
-        box-sizing: border-box;
-        flex-direction: row;
-        padding: var(--padding-8xs) var(--padding-base);
-      }
-      .frame-parent13 {
-        align-self: stretch;
-        flex-direction: column;
-      }
-      .in-otp {
-        position: relative;
-        line-height: 32px;
-        font-weight: 500;
-        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-          #000;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        display: inline-block;
-        backdrop-filter: blur(4px);
-        min-width: 89px;
-      }
-      .frame-parent12 {
-        align-self: stretch;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        gap: 10px;
-        max-width: 100%;
-      }
-      .gi-otp,
-      .ti-c {
-        position: relative;
-        line-height: 150%;
-        display: inline-block;
-      }
-      .ti-c {
-        align-self: stretch;
-        height: 53px;
-        white-space: pre-wrap;
-        flex-shrink: 0;
-        z-index: 1;
-      }
-      .gi-otp {
-        font-size: var(--font-size-lg);
-        font-weight: 500;
-        font-family: var(--body-text);
-        color: var(--color-white);
-        text-align: left;
-        min-width: 71px;
-      }
-      .button {
-        cursor: pointer;
-        border: 0;
-        padding: var(--padding-4xs) var(--padding-xl);
-        background-color: var(--color-black);
-        align-self: stretch;
-        border-radius: var(--br-5xs);
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        justify-content: center;
-        white-space: nowrap;
-      }
-      .button:hover {
-        background-color: #333;
-      }
-      .frame-child1,
-      .frame-child2,
-      .vector-parent {
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-      }
-      .frame-child1,
-      .frame-child2 {
-        max-width: 100%;
-        overflow: hidden;
-        max-height: 100%;
-      }
-      .vector-parent {
-        margin: 0 !important;
-      }
-      .frame-wrapper10 {
-        align-self: stretch;
-        height: 1px;
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        justify-content: flex-start;
-        position: relative;
-      }
-      .ng-nhp2 {
-        color: var(--color-deepskyblue-100);
-      }
-      .c-ti-khon-container {
-        width: 320px;
-        position: relative;
-        line-height: 150%;
-        font-weight: 300;
-        display: inline-block;
-        flex-shrink: 0;
-      }
-      .c-ti-khon-ng-nhp-wrapper {
-        align-self: stretch;
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        justify-content: center;
-        padding: 0 var(--padding-xl) 0 39px;
-      }
-      .frame-parent14,
-      .ti-c-v-ng-vi-cc-parent {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-      }
-      .frame-parent14 {
-        align-self: stretch;
-        gap: 7px;
-        font-size: var(--body-text-size);
-        color: var(--color-black);
-      }
-      .ti-c-v-ng-vi-cc-parent {
-        width: 489px;
-        gap: 36.5px;
-        max-width: 100%;
-        font-size: var(--font-size-base);
-      }
-      .frame-parent11,
-      .frame-parent9 {
-        align-self: stretch;
-        flex-direction: column;
-        justify-content: flex-start;
-      }
-      .frame-parent11 {
-        display: flex;
-        align-items: flex-start;
-        gap: 66px;
-        max-width: 100%;
-        font-size: var(--body-text-size);
-        color: var(--color-gray-100);
-      }
-      .frame-parent9 {
-        gap: 50px;
-      }
-      .auth-child,
-      .frame-parent9,
-      .frame-wrapper8,
-      .image-7-parent {
-        display: flex;
-        align-items: flex-start;
-        max-width: 100%;
-      }
-      .frame-wrapper8 {
-        width: 560px;
-        flex-direction: column;
-        justify-content: flex-start;
-        padding: var(--padding-11xl) 0 0;
-        box-sizing: border-box;
-        min-width: 560px;
-      }
-      .auth-child,
-      .image-7-parent {
-        flex-direction: row;
-      }
-      .image-7-parent {
-        flex: 1;
-        justify-content: flex-start;
-        gap: 129px;
-      }
-      .auth-child {
-        width: 1395px;
-        justify-content: flex-end;
-        padding: 0 65px var(--padding-7xs);
-        box-sizing: border-box;
-        text-align: left;
-        font-size: 40px;
-        color: var(--color-black);
-        font-family: var(--body-text);
-      }
-      .frame-child3 {
-        align-self: stretch;
-        position: relative;
-        max-width: 100%;
-        overflow: hidden;
-        max-height: 100%;
-        object-fit: contain;
-        margin-top: -1px;
-      }
-      .blank-line3,
-      .cng-ty-tnhh-sunshine-vit-nam1 {
-        margin: 0;
-      }
-      .fpt-university-campus {
-        font-weight: 500;
-      }
-      .vpd-fpt-university-campus-h {
-        margin: 0;
-      }
-      .hotline {
-        font-family: var(--body-text);
-      }
-      .t-t2-n {
-        font-weight: 500;
-      }
-      .hotline-0000-0000-830-20 {
-        margin: 0;
-      }
-      .chu-trch-nhim {
-        margin: 0;
-        font-weight: 500;
-      }
-      .cng-ty-tnhh-container {
-        position: relative;
-        line-height: 150%;
-        display: inline-block;
-        min-width: 496px;
-        max-width: 100%;
-      }
-      .v-sunshine {
-        margin: 0;
-      }
-      .gii-thiu-v {
-        font-weight: 500;
-      }
-      .gii-thiu-v-sunshine-ban-i {
-        margin: 0;
-      }
-      .lin-h,
-      .nhn-s {
-        margin: 0;
-        font-weight: 500;
-      }
-      .v-sunshine-gii-container {
-        align-self: stretch;
-        position: relative;
-        line-height: 150%;
-      }
-      .v-sunshine-gii-thiu-v-suns-container {
-        width: 238px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        padding: var(--padding-6xs) 0 0;
-        box-sizing: border-box;
-        min-width: 238px;
-      }
-      .dch-v {
-        margin: 0;
-      }
-      .t-khm-nha {
-        font-weight: 500;
-      }
-      .t-khm-nha-s {
-        margin: 0;
-      }
-      .sunshine-store,
-      .t-khm-theo {
-        margin: 0;
-        font-weight: 500;
-      }
-      .dch-v-t-container1 {
-        width: 100%;
-      }
-      .dch-v-t-container {
-        width: 188px;
-        position: relative;
-        line-height: 150%;
-        display: flex;
-        align-items: center;
-        flex-shrink: 0;
-        min-width: 188px;
-      }
-      .h-tr {
-        margin: 0;
-      }
-      .iu-khon-s {
-        font-weight: 500;
-      }
-      .iu-khon-s-dng {
-        margin: 0;
-      }
-      .chnh-sch-bo,
-      .chnh-sch-gii,
-      .h-tr-khch {
-        margin: 0;
-        font-weight: 500;
-      }
-      .h-tr-iu-container {
-        flex: 1;
-        position: relative;
-        line-height: 150%;
-        display: inline-block;
-        min-width: 233px;
-        max-width: 100%;
-      }
-      .dch-v-t-khm-nha-s-t-kh-parent {
-        flex: 1;
-        flex-direction: row;
-        justify-content: flex-start;
-        gap: 21px;
-        min-width: 369px;
-      }
-      .dch-v-t-khm-nha-s-t-kh-parent,
-      .frame-parent15,
-      .frame-wrapper12 {
-        display: flex;
-        align-items: flex-start;
-        max-width: 100%;
-      }
-      .frame-parent15 {
-        align-self: stretch;
-        flex-direction: row;
-        justify-content: flex-start;
-        gap: 46px;
-      }
-      .frame-wrapper12 {
-        flex: 1;
-        flex-direction: column;
-        justify-content: flex-end;
-        padding: 0 0 var(--padding-2xl);
-        box-sizing: border-box;
-        min-width: 553px;
-      }
-      .cng-ty-tnhh-sunshine-vit-nam-parent {
-        flex: 1;
-        display: flex;
-        flex-direction: row;
-        /* align-items: flex-end; */
-        /* justify-content: flex-start; */
-        gap: 63px;
-        max-width: 100%;
-      }
-      .frame-wrapper11 {
-        width: 1434px;
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        justify-content: flex-end;
-        padding: 0 var(--padding-xs);
-        box-sizing: border-box;
-        max-width: 100%;
-      }
-      .auth,
-      .vector-group {
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        justify-content: flex-start;
-        box-sizing: border-box;
-      }
-      .vector-group {
-        margin: 0 auto;
-        align-self: stretch;
-        padding: 0 0 0 var(--padding-9xs);
-        gap: 3.5px;
-        max-width: 100%;
-        text-align: left;
-        font-size: var(--font-size-lg);
-        color: var(--color-black);
-        font-family: var(--body-text);
-      }
-      .auth {
-        width: 100%;
-        position: relative;
-        background-color: var(--color-white);
-        padding: 34px 0 88.5px;
-        gap: 109px;
-        line-height: normal;
-        letter-spacing: normal;
-      }
-      @@media screen and (max-width: 1200px) {
-        .t-vn-trc-tuyn-group {
-          display: none;
-        }
-        .frame-wrapper7 {
-          width: 112.80000000000018px;
-        }
-        .frame-wrapper8 {
-          flex: 1;
-        }
-        .image-7-parent {
-          flex-wrap: wrap;
-          gap: var(--gap-45xl);
-        }
-        .auth-child {
-          padding-left: var(--padding-13xl);
-          padding-right: var(--padding-13xl);
-          box-sizing: border-box;
-        }
-        .cng-ty-tnhh-container {
-          flex: 1;
-        }
-        .cng-ty-tnhh-sunshine-vit-nam-parent {
-          flex-wrap: wrap;
-        }
-      }
-      @@media screen and (max-width: 1050px) {
-        .ng-k2 {
-          font-size: var(--font-size-13xl);
-          line-height: 48px;
-        }
-      }
-      @@media screen and (max-width: 750px) {
-        .t-vn-trc2 {
-          display: none;
-        }
-        .t-vn-trc-tuyn-group {
-          width: 314px;
-        }
-        .image-7-icon {
-          min-width: 100%;
-        }
-        .gmail-parent {
-          flex-wrap: wrap;
-        }
-        .ti-c-v-ng-vi-cc-parent {
-          gap: var(--gap-lg);
-        }
-        .frame-parent11 {
-          gap: var(--gap-14xl);
-        }
-        .frame-parent9 {
-          gap: var(--gap-6xl);
-        }
-        .frame-wrapper8 {
-          min-width: 100%;
-        }
-        .image-7-parent {
-          gap: var(--gap-13xl);
-        }
-        .cng-ty-tnhh-container {
-          min-width: 100%;
-        }
-        .dch-v-t-container,
-        .v-sunshine-gii-thiu-v-suns-container {
-          flex: 1;
-        }
-        .dch-v-t-khm-nha-s-t-kh-parent,
-        .frame-parent15 {
-          flex-wrap: wrap;
-        }
-        .frame-wrapper12 {
-          min-width: 100%;
-        }
-        .cng-ty-tnhh-sunshine-vit-nam-parent {
-          gap: var(--gap-12xl);
-        }
-        .auth {
-          gap: 54px;
-        }
-      }
-      @@media screen and (max-width: 450px) {
-        .frame-parent8 {
-          display: none;
-        }
-        .ng-k2 {
-          font-size: var(--subheading-size);
-          line-height: 36px;
-        }
-        .c-ti-khon-container,
-        .gmail,
-        .in-otp,
-        .label1 {
-          font-size: var(--font-size-base);
-          line-height: 24px;
-        }
-        .frame-parent11,
-        .image-7-parent {
-          gap: var(--gap-base);
-        }
-        .dch-v-t-khm-nha-s-t-kh-parent {
-          min-width: 100%;
-        }
-        .frame-parent15 {
-          gap: 23px;
-        }
-        .cng-ty-tnhh-sunshine-vit-nam-parent {
-          gap: var(--gap-base);
-        }
-        .auth {
-          gap: 27px;
-        }
-      }
-    </style>
-    <script>
-      const events = document.getElementById("events");
-
-      let isDown = false;
-      let startX;
-      let startY;
-      let scrollLeft;
-      let scrollTop;
-
-      events.addEventListener("mousedown", (e) => {
-        isDown = true;
-        startX = e.pageX - events.offsetLeft;
-        startY = e.pageY - events.offsetTop;
-        scrollLeft = events.scrollLeft;
-        scrollTop = events.scrollTop;
-        events.style.cursor = "grabbing";
-      });
-
-      events.addEventListener("mouseleave", () => {
-        isDown = false;
-        events.style.cursor = "grab";
-      });
-
-      events.addEventListener("mouseup", () => {
-        isDown = false;
-        events.style.cursor = "grab";
-      });
-
-      document.addEventListener("mousemove", (e) => {
-        if (!isDown) return;
-        e.preventDefault();
-        const x = e.pageX - events.offsetLeft;
-        const y = e.pageY - events.offsetTop;
-        const walkX = (x - startX) * 1;
-        const walkY = (y - startY) * 1;
-        events.scrollLeft = scrollLeft - walkX;
-        events.scrollTop = scrollTop - walkY;
-      });
-
-      const scrollLeftButton = document.getElementById(
-        "action-button--previous"
-      );
-      const scrollRightButton = document.getElementById("action-button--next");
-
-      scrollLeftButton.addEventListener("click", () => {
-        events.scrollBy({
-          top: 0,
-          left: -200,
-          behavior: "smooth",
-        });
-      });
-
-      scrollRightButton.addEventListener("click", () => {
-        events.scrollBy({
-          top: 0,
-          left: 200,
-          behavior: "smooth",
-        });
-      });
-
-      events.addEventListener("scroll", (e) => {
-        const position = events.scrollLeft;
-        if (position === 0) {
-          scrollLeftButton.disabled = true;
-        } else {
-          scrollLeftButton.disabled = false;
-        }
-
-        if (Math.round(position) === events.scrollWidth - events.clientWidth) {
-          scrollRightButton.disabled = true;
-        } else {
-          scrollRightButton.disabled = false;
-        }
-      });
-    </script>
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body>
-      <div style="display:none" class="container">
-    <main role="main" class="pb-3">
-        @RenderBody()
-    </main>
-</div>
-    <div class="waitlist">
-      <header class="frame-parent">
-        <div class="image-2-parent">
-          <img
-            class="image-2-icon"
-            loading="lazy"
-            alt=""
-            src="./public/image-2@2x.png"
-          />
-
-          <div class="sunshine-wrapper">
-            <h2 class="sunshine">
-              <span class="sun">Sun</span>
-              <b class="shine">Shine</b>
-            </h2>
-          </div>
-        </div>
-        <div class="frame-wrapper">
-          <div class="frame-group">
-            <div class="t-vn-trc-tuyn-wrapper">
-              <div class="t-vn-trc">Tư vấn trực tuyến</div>
-              
-            </div>
-            <div class="tin-y-t">Tin y tế</div>
-            <div class="t-khm">Đặt khám</div>
-          </div>
-        </div>
-        <button class="buttonsignup">
-          <div class="buttonsignup-child"></div>
-          <div class="ng-nhp">Đăng nhập</div>
-        </button>
-      </header>
-
-      <div class="pages"></div>
-      <img
-        class="waitlist-child"
-        loading="lazy"
-        alt=""
-        src="./public/vector-2112.svg"
-      />
-
-      <section class="copy-wrapper">
-        <div class="copy">
-          <h1 class="ng-dng-t">Ứng dụng đặt khám</h1>
-          <div class="t-khm-vi-container">
-            <span>
-              <p class="t-khm-vi-hn-600-bc-s-25">
-                <span
-                  >Đặt khám với hơn 600 bác sĩ, 25 bệnh viện, 100 phòng khám
-                  trên YouMedđể có số thứ tự và khung giờ khám trước</span
-                >
-                <span class="span">.</span>
-              </p>
-            </span>
-          </div>
-          <div class="submit-button">
-            <div class="field">
-              <input class="label" placeholder="Nhập tên nha sĩ" type="text" />
-            </div>
-            <button class="button-new">
-              <div class="tm-kim">Tìm kiếm</div>
-            </button>
-          </div>
-        </div>
-      </section>
-
-      <div class="container">
-        <div class="top-bar">
-          <svg
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            stroke-width="2"
-            stroke="currentColor"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path
-              d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z"
-            />
-            <path d="M16 3v4" />
-            <path d="M8 3v4" />
-            <path d="M4 11h16" />
-            <path d="M7 14h.013" />
-            <path d="M10.01 14h.005" />
-            <path d="M13.01 14h.005" />
-            <path d="M16.015 14h.005" />
-            <path d="M13.015 17h.005" />
-            <path d="M7.01 17h.005" />
-            <path d="M10.01 17h.005" />
-          </svg>
-          <h2>Upcoming events</h2>
-
-          <button
-            type="button"
-            disabled
-            id="action-button--previous"
-            class="action-button--horizontal-scroll"
-          >
-            <svg
-              width="16"
-              height="16"
-              fill="currentColor"
-              focusable="false"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12.771 7.115a.829.829 0 0 0-1.2 0L3 15.686l1.2 1.2 7.971-7.971 7.972 7.971 1.2-1.2-8.572-8.571Z"
-              ></path>
-            </svg>
-          </button>
-          <button
-            type="button"
-            id="action-button--next"
-            class="action-button--horizontal-scroll"
-          >
-            <svg
-              width="16"
-              height="16"
-              fill="currentColor"
-              focusable="false"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12.771 7.115a.829.829 0 0 0-1.2 0L3 15.686l1.2 1.2 7.971-7.971 7.972 7.971 1.2-1.2-8.572-8.571Z"
-              ></path>
-            </svg>
-          </button>
-        </div>
-        <div id="events">
-          <a href="#the-weeknd" class="event">
-            <div class="event__image">
-              <img
-                src="https://www.urbanstage.cz/wp-content/uploads/2020/03/weeknd.jpg"
-                alt="The Weeknd"
-              />
-              <div class="event__indicator event__date">
-                08
-                <div class="event__date__month">Feb</div>
-              </div>
-              <div class="event__indicator event__type">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                  stroke="currentColor"
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <path d="M15 5l0 2" />
-                  <path d="M15 11l0 2" />
-                  <path d="M15 17l0 2" />
-                  <path
-                    d="M5 5h14a2 2 0 0 1 2 2v3a2 2 0 0 0 0 4v3a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-3a2 2 0 0 0 0 -4v-3a2 2 0 0 1 2 -2"
-                  />
-                </svg>
-              </div>
-            </div>
-            <div class="event-description">
-              <h2>The Weeknd - After Hours Tour</h2>
-              <div class="bottom-stats">
-                <div class="bottom-stat">
-                  <div class="circle circle--red"></div>
-                  2 new posts
-                </div>
-                <div class="bottom-stat">
-                  <div class="circle circle--green"></div>
-                  5 tickets
-                </div>
-              </div>
-            </div>
-          </a>
-          <a href="#the-weeknd" class="event">
-            <div class="event__image">
-              <img
-                src="https://media.architecturaldigest.com/photos/641b2b8252ae61ead67e92d9/16:9/w_2560%2Cc_limit/GettyImages-1474485122.jpg"
-                alt="The Weeknd"
-              />
-              <div class="event__indicator event__date">
-                16
-                <div class="event__date__month">Feb</div>
-              </div>
-              <div class="event__indicator event__type">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                  stroke="currentColor"
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <path d="M15 5l0 2" />
-                  <path d="M15 11l0 2" />
-                  <path d="M15 17l0 2" />
-                  <path
-                    d="M5 5h14a2 2 0 0 1 2 2v3a2 2 0 0 0 0 4v3a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-3a2 2 0 0 0 0 -4v-3a2 2 0 0 1 2 -2"
-                  />
-                </svg>
-              </div>
-            </div>
-            <div class="event-description">
-              <h2>Taylor Swift - Eras Tour</h2>
-              <div class="bottom-stats">
-                <div class="bottom-stat">
-                  <div class="circle circle--red"></div>
-                  4 new posts
-                </div>
-                <div class="bottom-stat">
-                  <div class="circle circle--green"></div>
-                  10 tickets
-                </div>
-              </div>
-            </div>
-          </a>
-          <a href="#the-weeknd" class="event">
-            <div class="event__image">
-              <img
-                src="https://fox2now.com/wp-content/uploads/sites/14/2021/09/GettyImages-451833751.jpg?w=1280"
-                alt="The Weeknd"
-              />
-              <div class="event__indicator event__date">
-                20
-                <div class="event__date__month">Feb</div>
-              </div>
-              <div class="event__indicator event__type">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                  stroke="currentColor"
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <path d="M15 5l0 2" />
-                  <path d="M15 11l0 2" />
-                  <path d="M15 17l0 2" />
-                  <path
-                    d="M5 5h14a2 2 0 0 1 2 2v3a2 2 0 0 0 0 4v3a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-3a2 2 0 0 0 0 -4v-3a2 2 0 0 1 2 -2"
-                  />
-                </svg>
-              </div>
-            </div>
-            <div class="event-description">
-              <h2>Imagine Dragons</h2>
-              <div class="bottom-stats">
-                <div class="bottom-stat">
-                  <div class="circle circle--red"></div>
-                  2 new posts
-                </div>
-                <div class="bottom-stat">
-                  <div class="circle circle--green"></div>
-                  4 tickets purchased
-                </div>
-              </div>
-            </div>
-          </a>
-          <a href="#the-weeknd" class="event">
-            <div class="event__image">
-              <img
-                src="https://i.dailymail.co.uk/i/pix/2012/10/05/article-2212936-155E4783000005DC-817_1024x615_large.jpg"
-                alt="The Weeknd"
-              />
-              <div class="event__indicator event__date">
-                28
-                <div class="event__date__month">March</div>
-              </div>
-              <div class="event__indicator event__type">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                  stroke="currentColor"
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <path d="M15 5l0 2" />
-                  <path d="M15 11l0 2" />
-                  <path d="M15 17l0 2" />
-                  <path
-                    d="M5 5h14a2 2 0 0 1 2 2v3a2 2 0 0 0 0 4v3a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-3a2 2 0 0 0 0 -4v-3a2 2 0 0 1 2 -2"
-                  />
-                </svg>
-              </div>
-            </div>
-            <div class="event-description">
-              <h2>U2</h2>
-              <div class="bottom-stats">
-                <div class="bottom-stat">
-                  <div class="circle circle--red"></div>
-                  2 new posts
-                </div>
-                <div class="bottom-stat">
-                  <div class="circle circle--green"></div>
-                  3 tickets purchased
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-
-      <div class="container">
-        <div class="top-bar">
-          <svg
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            stroke-width="2"
-            stroke="currentColor"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path
-              d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z"
-            />
-            <path d="M16 3v4" />
-            <path d="M8 3v4" />
-            <path d="M4 11h16" />
-            <path d="M7 14h.013" />
-            <path d="M10.01 14h.005" />
-            <path d="M13.01 14h.005" />
-            <path d="M16.015 14h.005" />
-            <path d="M13.015 17h.005" />
-            <path d="M7.01 17h.005" />
-            <path d="M10.01 17h.005" />
-          </svg>
-          <h2>Upcoming events</h2>
-
-          <button
-            type="button"
-            disabled
-            id="action-button--previous"
-            class="action-button--horizontal-scroll"
-          >
-            <svg
-              width="16"
-              height="16"
-              fill="currentColor"
-              focusable="false"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12.771 7.115a.829.829 0 0 0-1.2 0L3 15.686l1.2 1.2 7.971-7.971 7.972 7.971 1.2-1.2-8.572-8.571Z"
-              ></path>
-            </svg>
-          </button>
-          <button
-            type="button"
-            id="action-button--next"
-            class="action-button--horizontal-scroll"
-          >
-            <svg
-              width="16"
-              height="16"
-              fill="currentColor"
-              focusable="false"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12.771 7.115a.829.829 0 0 0-1.2 0L3 15.686l1.2 1.2 7.971-7.971 7.972 7.971 1.2-1.2-8.572-8.571Z"
-              ></path>
-            </svg>
-          </button>
-        </div>
-        <div id="events">
-          <a href="#the-weeknd" class="event">
-            <div class="event__image">
-              <img
-                src="https://www.urbanstage.cz/wp-content/uploads/2020/03/weeknd.jpg"
-                alt="The Weeknd"
-              />
-              <div class="event__indicator event__date">
-                08
-                <div class="event__date__month">Feb</div>
-              </div>
-              <div class="event__indicator event__type">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                  stroke="currentColor"
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <path d="M15 5l0 2" />
-                  <path d="M15 11l0 2" />
-                  <path d="M15 17l0 2" />
-                  <path
-                    d="M5 5h14a2 2 0 0 1 2 2v3a2 2 0 0 0 0 4v3a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-3a2 2 0 0 0 0 -4v-3a2 2 0 0 1 2 -2"
-                  />
-                </svg>
-              </div>
-            </div>
-            <div class="event-description">
-              <h2>The Weeknd - After Hours Tour</h2>
-              <div class="bottom-stats">
-                <div class="bottom-stat">
-                  <div class="circle circle--red"></div>
-                  2 new posts
-                </div>
-                <div class="bottom-stat">
-                  <div class="circle circle--green"></div>
-                  5 tickets
-                </div>
-              </div>
-            </div>
-          </a>
-          <a href="#the-weeknd" class="event">
-            <div class="event__image">
-              <img
-                src="https://media.architecturaldigest.com/photos/641b2b8252ae61ead67e92d9/16:9/w_2560%2Cc_limit/GettyImages-1474485122.jpg"
-                alt="The Weeknd"
-              />
-              <div class="event__indicator event__date">
-                16
-                <div class="event__date__month">Feb</div>
-              </div>
-              <div class="event__indicator event__type">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                  stroke="currentColor"
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <path d="M15 5l0 2" />
-                  <path d="M15 11l0 2" />
-                  <path d="M15 17l0 2" />
-                  <path
-                    d="M5 5h14a2 2 0 0 1 2 2v3a2 2 0 0 0 0 4v3a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-3a2 2 0 0 0 0 -4v-3a2 2 0 0 1 2 -2"
-                  />
-                </svg>
-              </div>
-            </div>
-            <div class="event-description">
-              <h2>Taylor Swift - Eras Tour</h2>
-              <div class="bottom-stats">
-                <div class="bottom-stat">
-                  <div class="circle circle--red"></div>
-                  4 new posts
-                </div>
-                <div class="bottom-stat">
-                  <div class="circle circle--green"></div>
-                  10 tickets
-                </div>
-              </div>
-            </div>
-          </a>
-          <a href="#the-weeknd" class="event">
-            <div class="event__image">
-              <img
-                src="https://fox2now.com/wp-content/uploads/sites/14/2021/09/GettyImages-451833751.jpg?w=1280"
-                alt="The Weeknd"
-              />
-              <div class="event__indicator event__date">
-                20
-                <div class="event__date__month">Feb</div>
-              </div>
-              <div class="event__indicator event__type">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                  stroke="currentColor"
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <path d="M15 5l0 2" />
-                  <path d="M15 11l0 2" />
-                  <path d="M15 17l0 2" />
-                  <path
-                    d="M5 5h14a2 2 0 0 1 2 2v3a2 2 0 0 0 0 4v3a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-3a2 2 0 0 0 0 -4v-3a2 2 0 0 1 2 -2"
-                  />
-                </svg>
-              </div>
-            </div>
-            <div class="event-description">
-              <h2>Imagine Dragons</h2>
-              <div class="bottom-stats">
-                <div class="bottom-stat">
-                  <div class="circle circle--red"></div>
-                  2 new posts
-                </div>
-                <div class="bottom-stat">
-                  <div class="circle circle--green"></div>
-                  4 tickets purchased
-                </div>
-              </div>
-            </div>
-          </a>
-          <a href="#the-weeknd" class="event">
-            <div class="event__image">
-              <img
-                src="https://i.dailymail.co.uk/i/pix/2012/10/05/article-2212936-155E4783000005DC-817_1024x615_large.jpg"
-                alt="The Weeknd"
-              />
-              <div class="event__indicator event__date">
-                28
-                <div class="event__date__month">March</div>
-              </div>
-              <div class="event__indicator event__type">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                  stroke="currentColor"
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <path d="M15 5l0 2" />
-                  <path d="M15 11l0 2" />
-                  <path d="M15 17l0 2" />
-                  <path
-                    d="M5 5h14a2 2 0 0 1 2 2v3a2 2 0 0 0 0 4v3a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-3a2 2 0 0 0 0 -4v-3a2 2 0 0 1 2 -2"
-                  />
-                </svg>
-              </div>
-            </div>
-            <div class="event-description">
-              <h2>U2</h2>
-              <div class="bottom-stats">
-                <div class="bottom-stat">
-                  <div class="circle circle--red"></div>
-                  2 new posts
-                </div>
-                <div class="bottom-stat">
-                  <div class="circle circle--green"></div>
-                  3 tickets purchased
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-
-      <footer class="vector-group">
-        <img
-          class="frame-child3"
-          loading="lazy"
-          alt=""
-          src="./public/vector-21111.svg"
-        />
-
-        <div class="frame-wrapper11">
-          <div class="cng-ty-tnhh-sunshine-vit-nam-parent">
-            <div class="cng-ty-tnhh-container">
-              <p class="cng-ty-tnhh-sunshine-vit-nam1">
-                <b>CÔNG TY TNHH SunShine VIỆT NAM</b>
-              </p>
-              <p class="blank-line3">
-                <b>&nbsp;</b>
-              </p>
-              <p class="vpd-fpt-university-campus-h">
-                <b>VPĐD</b>
-                <span class="fpt-university-campus"
-                  >: FPT University, Campus HCM, Q.9, TP. HCM</span
-                >
-              </p>
-              <p class="hotline-0000-0000-830-20">
-                <b class="hotline">Hotline: </b>
-                <span class="t-t2-n"
-                  >0000-0000 (8:30 - 20:30 từ T2 đến T7)</span
-                >
-              </p>
-              <p class="chu-trch-nhim">
-                Chịu trách nhiệm nội dung: Biên soạn Huỳnh Trọng Nghĩa.
-              </p>
-            </div>
-            <div class="frame-wrapper12">
-              <div class="frame-parent15">
-                <div class="v-sunshine-gii-thiu-v-suns-container">
-                  <div class="v-sunshine-gii-container">
-                    <p class="v-sunshine">
-                      <b>Về SunShine</b>
-                    </p>
-                    <p class="gii-thiu-v-sunshine-ban-i">
-                      <b>&nbsp;</b>
-                      <span class="gii-thiu-v"
-                        >Giới thiệu về SunShine Ban điều hành</span
-                      >
-                    </p>
-                    <p class="nhn-s">Nhân sự & Tuyển dụng</p>
-                    <p class="lin-h">Liên hệ</p>
-                  </div>
-                </div>
-                <div class="dch-v-t-khm-nha-s-t-kh-parent">
-                  <div class="dch-v-t-container">
-                    <span class="dch-v-t-container1">
-                      <p class="dch-v">
-                        <b>Dịch vụ</b>
-                      </p>
-                      <p class="t-khm-nha-s">
-                        <b>&nbsp;</b>
-                        <span class="t-khm-nha">Đặt khám nha sĩ</span>
-                      </p>
-                      <p class="t-khm-theo">Đặt khám theo ca</p>
-                      <p class="sunshine-store">SunShine Store</p>
-                    </span>
-                  </div>
-                  <div class="h-tr-iu-container">
-                    <p class="h-tr">
-                      <b>Hỗ trợ</b>
-                    </p>
-                    <p class="iu-khon-s-dng">
-                      <b>&nbsp;</b>
-                      <span class="iu-khon-s">Điều Khoản Sử Dụng</span>
-                    </p>
-                    <p class="chnh-sch-bo">Chính Sách Bảo Mật</p>
-                    <p class="chnh-sch-gii">Chính sách giải quyết khiếu nại</p>
-                    <p class="h-tr-khch">Hỗ trợ khách hàng: cskh@sunshine.vn</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
-    </div>
-  </body>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="initial-scale=1, width=device-width" />
+
+	<link rel="stylesheet"
+		  href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" />
+	<link rel="stylesheet"
+		  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" />
+
+	<style>
+		.image-2-icon {
+			height: 48px;
+			width: 58px;
+			position: relative;
+			object-fit: cover;
+			flex-shrink: 0;
+		}
+
+		.sun {
+			font-weight: 500;
+		}
+
+		.shine {
+			color: var(--color-deepskyblue-100);
+		}
+
+		.sunshine {
+			margin: 0;
+			align-self: stretch;
+			position: relative;
+			font-size: inherit;
+			flex-shrink: 0;
+			debug_commit: bf4bc93;
+			white-space: nowrap;
+			font-family: inherit;
+		}
+
+		.image-2-parent,
+		.sunshine-wrapper {
+			display: flex;
+			align-items: flex-start;
+			justify-content: flex-start;
+		}
+
+		.sunshine-wrapper {
+			flex: 1;
+			flex-direction: column;
+			padding: 5px 0 0;
+		}
+
+		.image-2-parent {
+			width: 252.8px;
+			flex-direction: row;
+			gap: 5px;
+		}
+
+		.t-vn-trc {
+			position: relative;
+			white-space: nowrap;
+		}
+
+		.t-vn-trc-tuyn-wrapper {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: flex-start;
+			padding: 0 19px 0 0;
+		}
+
+		.t-khm,
+		.tin-y-t {
+			position: relative;
+			display: inline-block;
+			min-width: 68px;
+			white-space: nowrap;
+		}
+
+		.t-khm {
+			min-width: 90px;
+		}
+
+		.frame-group,
+		.frame-wrapper {
+			display: flex;
+			align-items: flex-start;
+			max-width: 100%;
+		}
+
+		.frame-group {
+			width: 461px;
+			flex-direction: row;
+			justify-content: space-between;
+			gap: var(--gap-xl);
+		}
+
+		.frame-wrapper {
+			width: 551.8px;
+			flex-direction: column;
+			justify-content: flex-end;
+			padding: 0 0 12px;
+			box-sizing: border-box;
+			font-size: var(--body-text-size);
+			color: var(--color-dimgray);
+		}
+
+		.buttonsignup-child {
+			height: 45px;
+			width: 150px;
+			position: relative;
+			border-radius: var(--br-31xl);
+			border: 1px solid var(--color-deepskyblue-100);
+			box-sizing: border-box;
+			display: none;
+		}
+
+		.ng-nhp {
+			position: relative;
+			font-size: var(--font-size-base);
+			font-weight: 500;
+			font-family: var(--font-rubik);
+			color: var(--color-deepskyblue-100);
+			text-align: left;
+			display: inline-block;
+			min-width: 83px;
+			z-index: 1;
+		}
+
+		.buttonsignup,
+		.frame-parent {
+			display: flex;
+			flex-direction: row;
+		}
+
+		.buttonsignup {
+			cursor: pointer;
+			border: 1px solid var(--color-deepskyblue-100);
+			padding: 13px 33px 9px;
+			background-color: transparent;
+			border-radius: var(--br-31xl);
+			align-items: flex-start;
+			justify-content: flex-start;
+			white-space: nowrap;
+		}
+
+			.buttonsignup:hover {
+				background-color: rgba(0, 166, 230, 0.09);
+				border: 1px solid var(--color-deepskyblue-200);
+				box-sizing: border-box;
+			}
+
+		.frame-parent {
+			margin: 0px auto;
+			width: 1581px;
+			align-items: flex-end;
+			justify-content: space-between;
+			padding: 0 var(--padding-xl) 0 0;
+			box-sizing: border-box;
+			gap: var(--gap-xl);
+			max-width: 100%;
+			text-align: left;
+			font-size: 32px;
+			color: #0b132a;
+			font-family: var(--font-rubik);
+		}
+
+		.pages {
+			width: 49px;
+			height: 1px;
+			display: none;
+		}
+
+		.waitlist-child {
+			margin-left: -75px;
+			margin-bottom: 58px;
+			width: 1674px;
+			height: 1px;
+			position: relative;
+			object-fit: contain;
+			max-width: 105%;
+			flex-shrink: 0;
+		}
+
+		.ng-dng-t {
+			margin: 0;
+			align-self: stretch;
+			position: relative;
+			font-size: inherit;
+			letter-spacing: -0.02em;
+			font-weight: 700;
+			font-family: inherit;
+		}
+
+		.span {
+			color: var(--color-white);
+		}
+
+		.t-khm-vi-hn-600-bc-s-25 {
+			margin: 0;
+		}
+
+		.label,
+		.t-khm-vi-container {
+			position: relative;
+			line-height: 150%;
+		}
+
+		.t-khm-vi-container {
+			align-self: stretch;
+			height: 108px;
+			font-size: var(--subheading-size);
+			display: flex;
+			align-items: center;
+		}
+
+		.label {
+			width: 150px;
+			border: 0;
+			outline: 0;
+			font-weight: 500;
+			font-family: var(--body-text);
+			font-size: var(--body-text-size);
+			background-color: transparent;
+			height: 30px;
+			color: #828282;
+			text-align: left;
+			display: inline-block;
+			padding: 0;
+		}
+
+		.field {
+			flex: 1;
+			box-shadow: var(--button-shadow);
+			border-radius: var(--br-5xs);
+			background-color: var(--color-white);
+			border: 1px solid #e0e0e0;
+			box-sizing: border-box;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: flex-start;
+			padding: 14px var(--padding-base);
+			min-width: 150px;
+			max-width: 100%;
+		}
+
+		.tm-kim {
+			position: relative;
+			font-size: var(--body-text-size);
+			line-height: 150%;
+			font-weight: 500;
+			font-family: var(--body-text);
+			color: var(--color-white);
+			text-align: left;
+			display: inline-block;
+			min-width: 87px;
+		}
+
+		.button-new,
+		.copy,
+		.submit-button {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.button-new {
+			cursor: pointer;
+			border: 0;
+			padding: var(--padding-base) 18px;
+			background-color: var(--color-deepskyblue-100);
+			box-shadow: var(--button-shadow);
+			border-radius: var(--br-5xs);
+			flex-direction: row;
+			white-space: nowrap;
+		}
+
+			.button-new:hover {
+				background-color: var(--color-deepskyblue-200);
+			}
+
+		.copy,
+		.submit-button {
+			max-width: 100%;
+		}
+
+		.submit-button {
+			width: 467px;
+			flex-direction: row;
+			flex-wrap: wrap;
+			gap: 16px;
+		}
+
+		.copy {
+			width: 966.5px;
+			flex-direction: column;
+			gap: var(--spacing-s);
+		}
+		/* *{
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			  } */
+		.copy-wrapper,
+		.waitlist {
+			margin: 0 auto;
+			display: flex;
+			align-items: flex-start;
+			box-sizing: border-box;
+		}
+
+		.copy-wrapper {
+			width: 1546.5px;
+			flex-direction: row;
+			justify-content: center;
+			padding: 0 var(--padding-xl);
+			max-width: 100%;
+			text-align: center;
+			font-size: var(--title-size);
+			color: var(--color-black);
+			font-family: var(--body-text);
+		}
+
+		.waitlist {
+			width: 100%;
+			position: relative;
+			background-color: var(--color-white);
+			overflow: hidden;
+			flex-direction: column;
+			justify-content: flex-start;
+			/* padding: 70px 0 70px 0px; */
+			gap: var(--gap-5xl);
+			line-height: normal;
+			letter-spacing: normal;
+		}
+
+		@@media screen and (max-width: 1200px) {
+			.waitlist {
+				/* padding-left: 27px; */
+				padding: 0px;
+				box-sizing: border-box;
+			}
+		}
+
+		@@media screen and (max-width: 1050px) {
+			.frame-group {
+				display: none;
+			}
+
+			.frame-wrapper {
+				width: 90.79999999999995px;
+			}
+
+			.ng-dng-t {
+				font-size: 51px;
+			}
+		}
+
+		@@media screen and (max-width: 450px) {
+			.t-vn-trc {
+				display: none;
+			}
+
+			.ng-dng-t {
+				font-size: 38px;
+			}
+
+			.t-khm-vi-container {
+				font-size: 19px;
+				line-height: 29px;
+			}
+
+			.label {
+				font-size: var(--font-size-base);
+				line-height: 24px;
+			}
+		}
+	</style>
+
+	<style>
+		body {
+			margin: 0;
+			line-height: normal;
+		}
+
+		:root {
+			/* fonts */
+			--body-text: Inter;
+			--font-rubik: Rubik;
+			/* font sizes */
+			--body-text-size: 20px;
+			--font-size-base: 16px;
+			--subheading-size: 24px;
+			--title-size: 64px;
+			/* Colors */
+			--color-white: #fff;
+			--color-deepskyblue-100: #00bfff;
+			--color-deepskyblue-200: #00a6e6;
+			--color-black: #000;
+			--color-dimgray: #4f5665;
+			/* Spacing */
+			--spacing-s: 24px;
+			/* Gaps */
+			--gap-5xl: 24px;
+			--gap-xl: 20px;
+			/* Paddings */
+			--padding-xl: 20px;
+			--padding-base: 16px;
+			/* Border radiuses */
+			--br-5xs: 8px;
+			--br-31xl: 50px;
+			/* Effects */
+			--button-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+		}
+	</style>
+
+	<style>
+		.top-bar {
+			display: flex;
+			gap: 16px;
+			align-items: center;
+			width: 100%;
+			flex-direction: row;
+			color: var(--headline-color);
+		}
+
+			.top-bar h2 {
+				font-size: 1.2rem;
+				font-weight: 700;
+				line-height: 1.5rem;
+			}
+
+			.top-bar svg {
+				color: var(--headline-color);
+			}
+
+		.action-buttons {
+			position: relative;
+			display: inline-flex;
+			flex: 0 0 auto;
+			gap: 8px;
+			scroll-snap-align: start;
+			width: 100%;
+			flex-wrap: wrap;
+		}
+
+		.action-button {
+			color: #163300;
+			border-radius: 16px;
+			height: 32px;
+			gap: 4px;
+			cursor: pointer;
+			display: flex;
+			padding: 0 12px;
+			font-weight: 600;
+			transition: all 0.2s ease-in-out;
+			white-space: nowrap;
+			align-items: center;
+			text-decoration: none;
+			background: var(--secondary);
+		}
+
+		.action-button--primary:active {
+			background: var(--accent-active);
+		}
+
+		.action-button:active {
+			background: var(--secondary-active);
+		}
+
+		.action-button--horizontal-scroll {
+			border-radius: 50%;
+			cursor: pointer;
+			border: none;
+			outline: none;
+			width: 32px;
+			height: 32px;
+			background: var(--accent);
+		}
+
+			.action-button--horizontal-scroll:hover {
+				background: var(--accent-hover);
+			}
+
+			.action-button--horizontal-scroll:active {
+				background: var(--accent-active);
+			}
+
+			.action-button--horizontal-scroll:disabled {
+				cursor: not-allowed;
+				background: var(--secondary);
+			}
+
+				.action-button--horizontal-scroll:disabled:hover {
+					background: var(--secondary);
+				}
+
+				.action-button--horizontal-scroll:disabled:active {
+					background: var(--secondary);
+				}
+
+		#action-button--previous {
+			margin-left: auto;
+			transform: rotate(-90deg);
+		}
+
+		#action-button--next {
+			transform: rotate(90deg);
+		}
+
+		.action-button:hover {
+			background: var(--secondary-hover);
+		}
+
+		.action-button--primary {
+			background: var(--accent);
+		}
+
+			.action-button--primary:hover {
+				background: var(--accent-hover);
+			}
+
+			.action-button--primary:active {
+				background: var(--accent-active);
+			}
+
+		#events {
+			display: flex;
+			gap: 1.5rem;
+			padding: 1rem 0px;
+			width: 100%;
+			flex-direction: row;
+			overflow: auto;
+		}
+
+		.event {
+			appearance: none;
+			text-decoration: none;
+			position: relative;
+			transition: all 0.2s ease-in-out;
+			min-width: 320px;
+			cursor: pointer;
+			flex-direction: column;
+			justify-content: space-between;
+			scroll-snap-align: start;
+			overflow: hidden;
+			color: rgba(29, 32, 59, 1);
+		}
+
+		.event__image {
+			position: relative;
+		}
+
+		.event__indicator {
+			position: absolute;
+			padding: 0.5rem;
+			min-width: 3.5rem;
+			min-height: 3.5rem;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			background: var(--white);
+			align-items: center;
+			border-radius: 0.5rem;
+		}
+
+		.event__date {
+			top: 0.5rem;
+			left: 0.5rem;
+			font-size: 1.35rem;
+		}
+
+		.event__date__month {
+			font-size: 0.6rem;
+			text-transform: uppercase;
+			font-weight: bold;
+			color: var(--event-headline);
+		}
+
+		.event__type {
+			top: 0.5rem;
+			right: 0.5rem;
+		}
+
+			.event__type svg {
+				color: var(--event-text);
+				height: 2rem;
+				width: 2rem;
+			}
+
+		.event-description {
+			color: var(--event-text);
+			padding: 0.5rem 0.75rem;
+		}
+
+		.event img {
+			width: 100%;
+			height: 250px;
+			border-radius: 1rem;
+			object-fit: cover;
+			object-position: top;
+		}
+
+		.event h2 {
+			font-size: 1.375rem;
+			letter-spacing: normal;
+			overflow-wrap: normal;
+			white-space: nowrap;
+			font-weight: 700;
+			line-height: 1.25rem;
+			color: var(--event-headline);
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+
+		.bottom-stats {
+			display: flex;
+			justify-content: space-between;
+			gap: 1rem;
+			width: 100%;
+			flex-direction: row;
+			color: var(--headline-color);
+		}
+
+		.bottom-stat {
+			display: flex;
+			gap: 0.5rem;
+			align-items: center;
+			flex-direction: row;
+		}
+
+		.container {
+			max-width: 1200px;
+			width: 100%;
+			min-width: 300px;
+			margin: 50px auto;
+		}
+
+		.circle {
+			height: 0.5rem;
+			width: 0.5rem;
+			border-radius: 50%;
+		}
+
+		.circle--green {
+			background: var(--success);
+		}
+
+		.circle--red {
+			background: var(--error);
+		}
+	</style>
+
+	<style>
+		body {
+			margin: 0;
+			line-height: normal;
+		}
+	</style>
+	<style>
+		.image-6-icon {
+			width: 27px;
+			height: 29px;
+			position: absolute;
+			margin: 0 !important;
+			top: 518px;
+			right: 598px;
+			object-fit: cover;
+		}
+
+		.image-2-icon2 {
+			height: 48px;
+			width: 58px;
+			position: relative;
+			object-fit: cover;
+			flex-shrink: 0;
+			debug_commit: bf4bc93;
+		}
+
+		.sun2 {
+			font-weight: 500;
+		}
+
+		.shine2 {
+			color: var(--color-deepskyblue-100);
+		}
+
+		.sunshine2 {
+			margin: 0;
+			align-self: stretch;
+			position: relative;
+			font-size: inherit;
+			flex-shrink: 0;
+			debug_commit: bf4bc93;
+			white-space: nowrap;
+			font-family: inherit;
+		}
+
+		.sunshine-container {
+			flex: 1;
+			flex-direction: column;
+			justify-content: flex-start;
+			padding: var(--padding-8xs) 0 0;
+		}
+
+		.frame-wrapper6,
+		.image-2-group,
+		.sunshine-container {
+			display: flex;
+			align-items: flex-start;
+		}
+
+		.image-2-group {
+			align-self: stretch;
+			flex-direction: row;
+			justify-content: flex-start;
+			gap: var(--gap-8xs);
+		}
+
+		.frame-wrapper6 {
+			width: 252.8px;
+			flex-direction: column;
+			justify-content: flex-end;
+			padding: 0 0 var(--padding-12xs);
+			box-sizing: border-box;
+		}
+
+		.t-vn-trc2,
+		.tin-y-t2 {
+			position: relative;
+			white-space: nowrap;
+		}
+
+		.tin-y-t2 {
+			display: inline-block;
+			min-width: 68px;
+		}
+
+		.tin-y-t-wrapper {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: flex-start;
+			padding: var(--padding-12xs) 0 0;
+		}
+
+		.t-khm1 {
+			position: relative;
+			display: inline-block;
+			min-width: 90px;
+			white-space: nowrap;
+		}
+
+		.frame-wrapper7,
+		.t-vn-trc-tuyn-group {
+			display: flex;
+			align-items: flex-start;
+			box-sizing: border-box;
+			max-width: 100%;
+		}
+
+		.t-vn-trc-tuyn-group {
+			width: 480px;
+			flex-direction: row;
+			justify-content: space-between;
+			padding: 0 var(--padding-xl) 0 0;
+			gap: var(--gap-xl);
+		}
+
+		.frame-wrapper7 {
+			width: 592.8px;
+			flex-direction: column;
+			justify-content: flex-end;
+			padding: 0 0 var(--padding-xs);
+			font-size: var(--body-text-size);
+			color: var(--color-dimgray);
+		}
+
+		.ng-k1 {
+			position: relative;
+			font-weight: 500;
+			display: inline-block;
+			min-width: 58px;
+			white-space: nowrap;
+		}
+
+		.ng-k-wrapper {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: flex-start;
+			padding: var(--padding-smi) 0 0;
+		}
+
+		.buttonsignup-inner {
+			height: 45px;
+			width: 150px;
+			position: relative;
+			border-radius: var(--br-31xl);
+			border: 1px solid var(--color-deepskyblue-100);
+			box-sizing: border-box;
+			display: none;
+		}
+
+		.ng-nhp1 {
+			position: relative;
+			font-size: var(--font-size-base);
+			font-weight: 500;
+			font-family: var(--font-rubik);
+			color: var(--color-deepskyblue-100);
+			text-align: left;
+			display: inline-block;
+			min-width: 83px;
+			z-index: 1;
+		}
+
+		.buttonsignup2,
+		.frame-parent8 {
+			display: flex;
+			flex-direction: row;
+			align-items: flex-start;
+			justify-content: flex-start;
+		}
+
+		.buttonsignup2 {
+			cursor: pointer;
+			border: 1px solid var(--color-deepskyblue-100);
+			padding: 11px var(--padding-14xl);
+			background-color: transparent;
+			border-radius: var(--br-31xl);
+			white-space: nowrap;
+		}
+
+			.buttonsignup2:hover {
+				background-color: var(--color-deepskyblue-300);
+				border: 1px solid var(--color-deepskyblue-200);
+				box-sizing: border-box;
+			}
+
+		.frame-parent8 {
+			gap: var(--gap-6xl);
+			font-size: var(--font-size-base);
+		}
+
+		.auth-inner,
+		.frame-header {
+			display: flex;
+			flex-direction: row;
+			max-width: 100%;
+		}
+
+		.frame-header {
+			flex: 1;
+			align-items: flex-end;
+			justify-content: space-between;
+			gap: var(--gap-xl);
+			text-align: left;
+			font-size: var(--font-size-13xl);
+			color: var(--color-gray-200);
+			font-family: var(--font-rubik);
+		}
+
+		.auth-inner {
+			align-self: stretch;
+			align-items: flex-start;
+			justify-content: flex-end;
+			padding: 0 var(--padding-5xs) 0 var(--padding-smi);
+			box-sizing: border-box;
+		}
+
+		.image-1-icon,
+		.image-7-icon {
+			position: relative;
+			object-fit: cover;
+		}
+
+		.image-7-icon {
+			height: 583px;
+			flex: 1;
+			border-radius: 180px;
+			max-width: 100%;
+			overflow: hidden;
+			min-width: 374px;
+		}
+
+		.image-1-icon {
+			width: 45px;
+			height: 46px;
+		}
+
+		.image-1-wrapper {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: flex-start;
+			padding: var(--padding-6xs) 0 0;
+		}
+
+		.ng-k2 {
+			margin: 0;
+			position: relative;
+			font-size: inherit;
+			line-height: 150%;
+			font-weight: 300;
+			font-family: inherit;
+		}
+
+		.frame-inner {
+			align-self: stretch;
+			height: 1px;
+			position: relative;
+			max-width: 100%;
+			overflow: hidden;
+			flex-shrink: 0;
+			z-index: 1;
+		}
+
+		.ng-k-parent {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: flex-start;
+		}
+
+		.frame-parent10,
+		.frame-wrapper9 {
+			display: flex;
+			flex-direction: row;
+			align-items: flex-start;
+		}
+
+		.frame-parent10 {
+			width: 215px;
+			justify-content: flex-start;
+			gap: var(--gap-mid);
+		}
+
+		.frame-wrapper9 {
+			width: 489px;
+			justify-content: center;
+			padding: 0 var(--padding-xl);
+			box-sizing: border-box;
+			max-width: 100%;
+		}
+
+		.gmail,
+		.m-otp-s {
+			position: relative;
+		}
+
+		.gmail {
+			width: 71px;
+			line-height: 32px;
+			font-weight: 500;
+			background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #000;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			display: inline-block;
+			flex-shrink: 0;
+			backdrop-filter: blur(4px);
+			z-index: 1;
+		}
+
+		.m-otp-s {
+			align-self: stretch;
+			line-height: 150%;
+		}
+
+		.gmail-parent,
+		.m-otp-s-c-gi-n-gmail-n-wrapper {
+			display: flex;
+			align-items: flex-start;
+			justify-content: flex-start;
+			max-width: 100%;
+		}
+
+		.m-otp-s-c-gi-n-gmail-n-wrapper {
+			flex: 1;
+			flex-direction: column;
+			padding: 2px 0 0;
+			box-sizing: border-box;
+			min-width: 318px;
+			font-size: var(--font-size-base);
+		}
+
+		.gmail-parent {
+			align-self: stretch;
+			flex-direction: row;
+			row-gap: 20px;
+		}
+
+		.label1 {
+			width: 384px;
+			border: 0;
+			outline: 0;
+			font-weight: 500;
+			font-family: var(--body-text);
+			font-size: var(--body-text-size);
+			background-color: transparent;
+			height: 30px;
+			position: relative;
+			line-height: 150%;
+			color: var(--color-gray-100);
+			text-align: left;
+			display: inline-block;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			max-width: 100%;
+			padding: 0;
+		}
+
+		.field1,
+		.frame-parent13 {
+			display: flex;
+			align-items: flex-start;
+			justify-content: flex-start;
+			max-width: 100%;
+		}
+
+		.field1 {
+			width: 489px;
+			border-radius: var(--br-5xs);
+			background-color: var(--color-white);
+			border: 1px solid var(--color-gainsboro-300);
+			box-sizing: border-box;
+			flex-direction: row;
+			padding: var(--padding-8xs) var(--padding-base);
+		}
+
+		.frame-parent13 {
+			align-self: stretch;
+			flex-direction: column;
+		}
+
+		.in-otp {
+			position: relative;
+			line-height: 32px;
+			font-weight: 500;
+			background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #000;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			display: inline-block;
+			backdrop-filter: blur(4px);
+			min-width: 89px;
+		}
+
+		.frame-parent12 {
+			align-self: stretch;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: flex-start;
+			gap: 10px;
+			max-width: 100%;
+		}
+
+		.gi-otp,
+		.ti-c {
+			position: relative;
+			line-height: 150%;
+			display: inline-block;
+		}
+
+		.ti-c {
+			align-self: stretch;
+			height: 53px;
+			white-space: pre-wrap;
+			flex-shrink: 0;
+			z-index: 1;
+		}
+
+		.gi-otp {
+			font-size: var(--font-size-lg);
+			font-weight: 500;
+			font-family: var(--body-text);
+			color: var(--color-white);
+			text-align: left;
+			min-width: 71px;
+		}
+
+		.button {
+			cursor: pointer;
+			border: 0;
+			padding: var(--padding-4xs) var(--padding-xl);
+			background-color: var(--color-black);
+			align-self: stretch;
+			border-radius: var(--br-5xs);
+			display: flex;
+			flex-direction: row;
+			align-items: flex-start;
+			justify-content: center;
+			white-space: nowrap;
+		}
+
+			.button:hover {
+				background-color: #333;
+			}
+
+		.frame-child1,
+		.frame-child2,
+		.vector-parent {
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+		}
+
+		.frame-child1,
+		.frame-child2 {
+			max-width: 100%;
+			overflow: hidden;
+			max-height: 100%;
+		}
+
+		.vector-parent {
+			margin: 0 !important;
+		}
+
+		.frame-wrapper10 {
+			align-self: stretch;
+			height: 1px;
+			display: flex;
+			flex-direction: row;
+			align-items: flex-start;
+			justify-content: flex-start;
+			position: relative;
+		}
+
+		.ng-nhp2 {
+			color: var(--color-deepskyblue-100);
+		}
+
+		.c-ti-khon-container {
+			width: 320px;
+			position: relative;
+			line-height: 150%;
+			font-weight: 300;
+			display: inline-block;
+			flex-shrink: 0;
+		}
+
+		.c-ti-khon-ng-nhp-wrapper {
+			align-self: stretch;
+			display: flex;
+			flex-direction: row;
+			align-items: flex-start;
+			justify-content: center;
+			padding: 0 var(--padding-xl) 0 39px;
+		}
+
+		.frame-parent14,
+		.ti-c-v-ng-vi-cc-parent {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: flex-start;
+		}
+
+		.frame-parent14 {
+			align-self: stretch;
+			gap: 7px;
+			font-size: var(--body-text-size);
+			color: var(--color-black);
+		}
+
+		.ti-c-v-ng-vi-cc-parent {
+			width: 489px;
+			gap: 36.5px;
+			max-width: 100%;
+			font-size: var(--font-size-base);
+		}
+
+		.frame-parent11,
+		.frame-parent9 {
+			align-self: stretch;
+			flex-direction: column;
+			justify-content: flex-start;
+		}
+
+		.frame-parent11 {
+			display: flex;
+			align-items: flex-start;
+			gap: 66px;
+			max-width: 100%;
+			font-size: var(--body-text-size);
+			color: var(--color-gray-100);
+		}
+
+		.frame-parent9 {
+			gap: 50px;
+		}
+
+		.auth-child,
+		.frame-parent9,
+		.frame-wrapper8,
+		.image-7-parent {
+			display: flex;
+			align-items: flex-start;
+			max-width: 100%;
+		}
+
+		.frame-wrapper8 {
+			width: 560px;
+			flex-direction: column;
+			justify-content: flex-start;
+			padding: var(--padding-11xl) 0 0;
+			box-sizing: border-box;
+			min-width: 560px;
+		}
+
+		.auth-child,
+		.image-7-parent {
+			flex-direction: row;
+		}
+
+		.image-7-parent {
+			flex: 1;
+			justify-content: flex-start;
+			gap: 129px;
+		}
+
+		.auth-child {
+			width: 1395px;
+			justify-content: flex-end;
+			padding: 0 65px var(--padding-7xs);
+			box-sizing: border-box;
+			text-align: left;
+			font-size: 40px;
+			color: var(--color-black);
+			font-family: var(--body-text);
+		}
+
+		.frame-child3 {
+			align-self: stretch;
+			position: relative;
+			max-width: 100%;
+			overflow: hidden;
+			max-height: 100%;
+			object-fit: contain;
+			margin-top: -1px;
+		}
+
+		.blank-line3,
+		.cng-ty-tnhh-sunshine-vit-nam1 {
+			margin: 0;
+		}
+
+		.fpt-university-campus {
+			font-weight: 500;
+		}
+
+		.vpd-fpt-university-campus-h {
+			margin: 0;
+		}
+
+		.hotline {
+			font-family: var(--body-text);
+		}
+
+		.t-t2-n {
+			font-weight: 500;
+		}
+
+		.hotline-0000-0000-830-20 {
+			margin: 0;
+		}
+
+		.chu-trch-nhim {
+			margin: 0;
+			font-weight: 500;
+		}
+
+		.cng-ty-tnhh-container {
+			position: relative;
+			line-height: 150%;
+			display: inline-block;
+			min-width: 496px;
+			max-width: 100%;
+		}
+
+		.v-sunshine {
+			margin: 0;
+		}
+
+		.gii-thiu-v {
+			font-weight: 500;
+		}
+
+		.gii-thiu-v-sunshine-ban-i {
+			margin: 0;
+		}
+
+		.lin-h,
+		.nhn-s {
+			margin: 0;
+			font-weight: 500;
+		}
+
+		.v-sunshine-gii-container {
+			align-self: stretch;
+			position: relative;
+			line-height: 150%;
+		}
+
+		.v-sunshine-gii-thiu-v-suns-container {
+			width: 238px;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: flex-start;
+			padding: var(--padding-6xs) 0 0;
+			box-sizing: border-box;
+			min-width: 238px;
+		}
+
+		.dch-v {
+			margin: 0;
+		}
+
+		.t-khm-nha {
+			font-weight: 500;
+		}
+
+		.t-khm-nha-s {
+			margin: 0;
+		}
+
+		.sunshine-store,
+		.t-khm-theo {
+			margin: 0;
+			font-weight: 500;
+		}
+
+		.dch-v-t-container1 {
+			width: 100%;
+		}
+
+		.dch-v-t-container {
+			width: 188px;
+			position: relative;
+			line-height: 150%;
+			display: flex;
+			align-items: center;
+			flex-shrink: 0;
+			min-width: 188px;
+		}
+
+		.h-tr {
+			margin: 0;
+		}
+
+		.iu-khon-s {
+			font-weight: 500;
+		}
+
+		.iu-khon-s-dng {
+			margin: 0;
+		}
+
+		.chnh-sch-bo,
+		.chnh-sch-gii,
+		.h-tr-khch {
+			margin: 0;
+			font-weight: 500;
+		}
+
+		.h-tr-iu-container {
+			flex: 1;
+			position: relative;
+			line-height: 150%;
+			display: inline-block;
+			min-width: 233px;
+			max-width: 100%;
+		}
+
+		.dch-v-t-khm-nha-s-t-kh-parent {
+			flex: 1;
+			flex-direction: row;
+			justify-content: flex-start;
+			gap: 21px;
+			min-width: 369px;
+		}
+
+		.dch-v-t-khm-nha-s-t-kh-parent,
+		.frame-parent15,
+		.frame-wrapper12 {
+			display: flex;
+			align-items: flex-start;
+			max-width: 100%;
+		}
+
+		.frame-parent15 {
+			align-self: stretch;
+			flex-direction: row;
+			justify-content: flex-start;
+			gap: 46px;
+		}
+
+		.frame-wrapper12 {
+			flex: 1;
+			flex-direction: column;
+			justify-content: flex-end;
+			padding: 0 0 var(--padding-2xl);
+			box-sizing: border-box;
+			min-width: 553px;
+		}
+
+		.cng-ty-tnhh-sunshine-vit-nam-parent {
+			flex: 1;
+			display: flex;
+			flex-direction: row;
+			/* align-items: flex-end; */
+			/* justify-content: flex-start; */
+			gap: 63px;
+			max-width: 100%;
+		}
+
+		.frame-wrapper11 {
+			width: 1434px;
+			display: flex;
+			flex-direction: row;
+			align-items: flex-start;
+			justify-content: flex-end;
+			padding: 0 var(--padding-xs);
+			box-sizing: border-box;
+			max-width: 100%;
+		}
+
+		.auth,
+		.vector-group {
+			margin: 0 auto;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+			justify-content: flex-start;
+			box-sizing: border-box;
+		}
+
+		.vector-group {
+			margin: 0 auto;
+			align-self: stretch;
+			padding: 0 0 0 var(--padding-9xs);
+			gap: 3.5px;
+			max-width: 100%;
+			text-align: left;
+			font-size: var(--font-size-lg);
+			color: var(--color-black);
+			font-family: var(--body-text);
+		}
+
+		.auth {
+			width: 100%;
+			position: relative;
+			background-color: var(--color-white);
+			padding: 34px 0 88.5px;
+			gap: 109px;
+			line-height: normal;
+			letter-spacing: normal;
+		}
+
+		@@media screen and (max-width: 1200px) {
+			.t-vn-trc-tuyn-group {
+				display: none;
+			}
+
+			.frame-wrapper7 {
+				width: 112.80000000000018px;
+			}
+
+			.frame-wrapper8 {
+				flex: 1;
+			}
+
+			.image-7-parent {
+				flex-wrap: wrap;
+				gap: var(--gap-45xl);
+			}
+
+			.auth-child {
+				padding-left: var(--padding-13xl);
+				padding-right: var(--padding-13xl);
+				box-sizing: border-box;
+			}
+
+			.cng-ty-tnhh-container {
+				flex: 1;
+			}
+
+			.cng-ty-tnhh-sunshine-vit-nam-parent {
+				flex-wrap: wrap;
+			}
+		}
+
+		@@media screen and (max-width: 1050px) {
+			.ng-k2 {
+				font-size: var(--font-size-13xl);
+				line-height: 48px;
+			}
+		}
+
+		@@media screen and (max-width: 750px) {
+			.t-vn-trc2 {
+				display: none;
+			}
+
+			.t-vn-trc-tuyn-group {
+				width: 314px;
+			}
+
+			.image-7-icon {
+				min-width: 100%;
+			}
+
+			.gmail-parent {
+				flex-wrap: wrap;
+			}
+
+			.ti-c-v-ng-vi-cc-parent {
+				gap: var(--gap-lg);
+			}
+
+			.frame-parent11 {
+				gap: var(--gap-14xl);
+			}
+
+			.frame-parent9 {
+				gap: var(--gap-6xl);
+			}
+
+			.frame-wrapper8 {
+				min-width: 100%;
+			}
+
+			.image-7-parent {
+				gap: var(--gap-13xl);
+			}
+
+			.cng-ty-tnhh-container {
+				min-width: 100%;
+			}
+
+			.dch-v-t-container,
+			.v-sunshine-gii-thiu-v-suns-container {
+				flex: 1;
+			}
+
+			.dch-v-t-khm-nha-s-t-kh-parent,
+			.frame-parent15 {
+				flex-wrap: wrap;
+			}
+
+			.frame-wrapper12 {
+				min-width: 100%;
+			}
+
+			.cng-ty-tnhh-sunshine-vit-nam-parent {
+				gap: var(--gap-12xl);
+			}
+
+			.auth {
+				gap: 54px;
+			}
+		}
+
+		@@media screen and (max-width: 450px) {
+			.frame-parent8 {
+				display: none;
+			}
+
+			.ng-k2 {
+				font-size: var(--subheading-size);
+				line-height: 36px;
+			}
+
+			.c-ti-khon-container,
+			.gmail,
+			.in-otp,
+			.label1 {
+				font-size: var(--font-size-base);
+				line-height: 24px;
+			}
+
+			.frame-parent11,
+			.image-7-parent {
+				gap: var(--gap-base);
+			}
+
+			.dch-v-t-khm-nha-s-t-kh-parent {
+				min-width: 100%;
+			}
+
+			.frame-parent15 {
+				gap: 23px;
+			}
+
+			.cng-ty-tnhh-sunshine-vit-nam-parent {
+				gap: var(--gap-base);
+			}
+
+			.auth {
+				gap: 27px;
+			}
+		}
+	</style>
+	<script>
+		const events = document.getElementById("events");
+
+		let isDown = false;
+		let startX;
+		let startY;
+		let scrollLeft;
+		let scrollTop;
+
+		events.addEventListener("mousedown", (e) => {
+			isDown = true;
+			startX = e.pageX - events.offsetLeft;
+			startY = e.pageY - events.offsetTop;
+			scrollLeft = events.scrollLeft;
+			scrollTop = events.scrollTop;
+			events.style.cursor = "grabbing";
+		});
+
+		events.addEventListener("mouseleave", () => {
+			isDown = false;
+			events.style.cursor = "grab";
+		});
+
+		events.addEventListener("mouseup", () => {
+			isDown = false;
+			events.style.cursor = "grab";
+		});
+
+		document.addEventListener("mousemove", (e) => {
+			if (!isDown) return;
+			e.preventDefault();
+			const x = e.pageX - events.offsetLeft;
+			const y = e.pageY - events.offsetTop;
+			const walkX = (x - startX) * 1;
+			const walkY = (y - startY) * 1;
+			events.scrollLeft = scrollLeft - walkX;
+			events.scrollTop = scrollTop - walkY;
+		});
+
+		const scrollLeftButton = document.getElementById(
+			"action-button--previous"
+		);
+		const scrollRightButton = document.getElementById("action-button--next");
+
+		scrollLeftButton.addEventListener("click", () => {
+			events.scrollBy({
+				top: 0,
+				left: -200,
+				behavior: "smooth",
+			});
+		});
+
+		scrollRightButton.addEventListener("click", () => {
+			events.scrollBy({
+				top: 0,
+				left: 200,
+				behavior: "smooth",
+			});
+		});
+
+		events.addEventListener("scroll", (e) => {
+			const position = events.scrollLeft;
+			if (position === 0) {
+				scrollLeftButton.disabled = true;
+			} else {
+				scrollLeftButton.disabled = false;
+			}
+
+			if (Math.round(position) === events.scrollWidth - events.clientWidth) {
+				scrollRightButton.disabled = true;
+			} else {
+				scrollRightButton.disabled = false;
+			}
+		});
+	</script>
+	<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+	<div style="display:none" class="container">
+		<main role="main" class="pb-3">
+			@RenderBody()
+		</main>
+	</div>
+	<div class="waitlist">
+		<header class="frame-parent">
+			<div class="image-2-parent">
+				<img class="image-2-icon"
+					 loading="lazy"
+					 alt=""
+					 src="./public/image-2@2x.png" />
+
+				<div class="sunshine-wrapper">
+					<h2 class="sunshine">
+						<span class="sun">Sun</span>
+						<b class="shine">Shine</b>
+					</h2>
+				</div>
+			</div>
+			<div class="frame-wrapper">
+				<div class="frame-group">
+					<div class="t-vn-trc-tuyn-wrapper">
+						<div class="t-vn-trc">Tư vấn trực tuyến</div>
+
+					</div>
+					<div class="tin-y-t">Tin y tế</div>
+					<div class="t-khm">Đặt khám</div>
+				</div>
+			</div>
+			<button class="buttonsignup">
+				<div class="buttonsignup-child"></div>
+				<div class="ng-nhp">Đăng nhập</div>
+			</button>
+		</header>
+
+		<div class="pages"></div>
+		<img class="waitlist-child"
+			 loading="lazy"
+			 alt=""
+			 src="./public/vector-2112.svg" />
+
+		<section class="copy-wrapper">
+			<div class="copy">
+				<h1 class="ng-dng-t">Ứng dụng đặt khám</h1>
+				<div class="t-khm-vi-container">
+					<span>
+						<p class="t-khm-vi-hn-600-bc-s-25">
+							<span>
+								Đặt khám với hơn 600 bác sĩ, 25 bệnh viện, 100 phòng khám
+								trên YouMedđể có số thứ tự và khung giờ khám trước
+							</span>
+							<span class="span">.</span>
+						</p>
+					</span>
+				</div>
+				<div class="submit-button">
+					<div class="field">
+						<input class="label" placeholder="Nhập tên nha sĩ" type="text" />
+					</div>
+					<button class="button-new">
+						<div class="tm-kim">Tìm kiếm</div>
+					</button>
+				</div>
+			</div>
+		</section>
+
+		<div class="container">
+			<div class="top-bar">
+				<svg aria-hidden="true"
+					 xmlns="http://www.w3.org/2000/svg"
+					 width="24"
+					 height="24"
+					 viewBox="0 0 24 24"
+					 stroke-width="2"
+					 stroke="currentColor"
+					 fill="none"
+					 stroke-linecap="round"
+					 stroke-linejoin="round">
+					<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+					<path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z" />
+					<path d="M16 3v4" />
+					<path d="M8 3v4" />
+					<path d="M4 11h16" />
+					<path d="M7 14h.013" />
+					<path d="M10.01 14h.005" />
+					<path d="M13.01 14h.005" />
+					<path d="M16.015 14h.005" />
+					<path d="M13.015 17h.005" />
+					<path d="M7.01 17h.005" />
+					<path d="M10.01 17h.005" />
+				</svg>
+				<h2>Upcoming events</h2>
+
+				<button type="button"
+						disabled
+						id="action-button--previous"
+						class="action-button--horizontal-scroll">
+					<svg width="16"
+						 height="16"
+						 fill="currentColor"
+						 focusable="false"
+						 viewBox="0 0 24 24">
+						<path d="M12.771 7.115a.829.829 0 0 0-1.2 0L3 15.686l1.2 1.2 7.971-7.971 7.972 7.971 1.2-1.2-8.572-8.571Z"></path>
+					</svg>
+				</button>
+				<button type="button"
+						id="action-button--next"
+						class="action-button--horizontal-scroll">
+					<svg width="16"
+						 height="16"
+						 fill="currentColor"
+						 focusable="false"
+						 viewBox="0 0 24 24">
+						<path d="M12.771 7.115a.829.829 0 0 0-1.2 0L3 15.686l1.2 1.2 7.971-7.971 7.972 7.971 1.2-1.2-8.572-8.571Z"></path>
+					</svg>
+				</button>
+			</div>
+			<div id="events">
+				<a href="#the-weeknd" class="event">
+					<div class="event__image">
+						<img src="https://www.urbanstage.cz/wp-content/uploads/2020/03/weeknd.jpg"
+							 alt="The Weeknd" />
+						<div class="event__indicator event__date">
+							08
+							<div class="event__date__month">Feb</div>
+						</div>
+						<div class="event__indicator event__type">
+							<svg xmlns="http://www.w3.org/2000/svg"
+								 width="24"
+								 height="24"
+								 viewBox="0 0 24 24"
+								 stroke-width="2"
+								 stroke="currentColor"
+								 fill="none"
+								 stroke-linecap="round"
+								 stroke-linejoin="round">
+								<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+								<path d="M15 5l0 2" />
+								<path d="M15 11l0 2" />
+								<path d="M15 17l0 2" />
+								<path d="M5 5h14a2 2 0 0 1 2 2v3a2 2 0 0 0 0 4v3a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-3a2 2 0 0 0 0 -4v-3a2 2 0 0 1 2 -2" />
+							</svg>
+						</div>
+					</div>
+					<div class="event-description">
+						<h2>The Weeknd - After Hours Tour</h2>
+						<div class="bottom-stats">
+							<div class="bottom-stat">
+								<div class="circle circle--red"></div>
+								2 new posts
+							</div>
+							<div class="bottom-stat">
+								<div class="circle circle--green"></div>
+								5 tickets
+							</div>
+						</div>
+					</div>
+				</a>
+				<a href="#the-weeknd" class="event">
+					<div class="event__image">
+						<img src="https://media.architecturaldigest.com/photos/641b2b8252ae61ead67e92d9/16:9/w_2560%2Cc_limit/GettyImages-1474485122.jpg"
+							 alt="The Weeknd" />
+						<div class="event__indicator event__date">
+							16
+							<div class="event__date__month">Feb</div>
+						</div>
+						<div class="event__indicator event__type">
+							<svg xmlns="http://www.w3.org/2000/svg"
+								 width="24"
+								 height="24"
+								 viewBox="0 0 24 24"
+								 stroke-width="2"
+								 stroke="currentColor"
+								 fill="none"
+								 stroke-linecap="round"
+								 stroke-linejoin="round">
+								<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+								<path d="M15 5l0 2" />
+								<path d="M15 11l0 2" />
+								<path d="M15 17l0 2" />
+								<path d="M5 5h14a2 2 0 0 1 2 2v3a2 2 0 0 0 0 4v3a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-3a2 2 0 0 0 0 -4v-3a2 2 0 0 1 2 -2" />
+							</svg>
+						</div>
+					</div>
+					<div class="event-description">
+						<h2>Taylor Swift - Eras Tour</h2>
+						<div class="bottom-stats">
+							<div class="bottom-stat">
+								<div class="circle circle--red"></div>
+								4 new posts
+							</div>
+							<div class="bottom-stat">
+								<div class="circle circle--green"></div>
+								10 tickets
+							</div>
+						</div>
+					</div>
+				</a>
+				<a href="#the-weeknd" class="event">
+					<div class="event__image">
+						<img src="https://fox2now.com/wp-content/uploads/sites/14/2021/09/GettyImages-451833751.jpg?w=1280"
+							 alt="The Weeknd" />
+						<div class="event__indicator event__date">
+							20
+							<div class="event__date__month">Feb</div>
+						</div>
+						<div class="event__indicator event__type">
+							<svg xmlns="http://www.w3.org/2000/svg"
+								 width="24"
+								 height="24"
+								 viewBox="0 0 24 24"
+								 stroke-width="2"
+								 stroke="currentColor"
+								 fill="none"
+								 stroke-linecap="round"
+								 stroke-linejoin="round">
+								<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+								<path d="M15 5l0 2" />
+								<path d="M15 11l0 2" />
+								<path d="M15 17l0 2" />
+								<path d="M5 5h14a2 2 0 0 1 2 2v3a2 2 0 0 0 0 4v3a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-3a2 2 0 0 0 0 -4v-3a2 2 0 0 1 2 -2" />
+							</svg>
+						</div>
+					</div>
+					<div class="event-description">
+						<h2>Imagine Dragons</h2>
+						<div class="bottom-stats">
+							<div class="bottom-stat">
+								<div class="circle circle--red"></div>
+								2 new posts
+							</div>
+							<div class="bottom-stat">
+								<div class="circle circle--green"></div>
+								4 tickets purchased
+							</div>
+						</div>
+					</div>
+				</a>
+				<a href="#the-weeknd" class="event">
+					<div class="event__image">
+						<img src="https://i.dailymail.co.uk/i/pix/2012/10/05/article-2212936-155E4783000005DC-817_1024x615_large.jpg"
+							 alt="The Weeknd" />
+						<div class="event__indicator event__date">
+							28
+							<div class="event__date__month">March</div>
+						</div>
+						<div class="event__indicator event__type">
+							<svg xmlns="http://www.w3.org/2000/svg"
+								 width="24"
+								 height="24"
+								 viewBox="0 0 24 24"
+								 stroke-width="2"
+								 stroke="currentColor"
+								 fill="none"
+								 stroke-linecap="round"
+								 stroke-linejoin="round">
+								<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+								<path d="M15 5l0 2" />
+								<path d="M15 11l0 2" />
+								<path d="M15 17l0 2" />
+								<path d="M5 5h14a2 2 0 0 1 2 2v3a2 2 0 0 0 0 4v3a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-3a2 2 0 0 0 0 -4v-3a2 2 0 0 1 2 -2" />
+							</svg>
+						</div>
+					</div>
+					<div class="event-description">
+						<h2>U2</h2>
+						<div class="bottom-stats">
+							<div class="bottom-stat">
+								<div class="circle circle--red"></div>
+								2 new posts
+							</div>
+							<div class="bottom-stat">
+								<div class="circle circle--green"></div>
+								3 tickets purchased
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="top-bar">
+				<svg aria-hidden="true"
+					 xmlns="http://www.w3.org/2000/svg"
+					 width="24"
+					 height="24"
+					 viewBox="0 0 24 24"
+					 stroke-width="2"
+					 stroke="currentColor"
+					 fill="none"
+					 stroke-linecap="round"
+					 stroke-linejoin="round">
+					<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+					<path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z" />
+					<path d="M16 3v4" />
+					<path d="M8 3v4" />
+					<path d="M4 11h16" />
+					<path d="M7 14h.013" />
+					<path d="M10.01 14h.005" />
+					<path d="M13.01 14h.005" />
+					<path d="M16.015 14h.005" />
+					<path d="M13.015 17h.005" />
+					<path d="M7.01 17h.005" />
+					<path d="M10.01 17h.005" />
+				</svg>
+				<h2>Upcoming events</h2>
+
+				<button type="button"
+						disabled
+						id="action-button--previous"
+						class="action-button--horizontal-scroll">
+					<svg width="16"
+						 height="16"
+						 fill="currentColor"
+						 focusable="false"
+						 viewBox="0 0 24 24">
+						<path d="M12.771 7.115a.829.829 0 0 0-1.2 0L3 15.686l1.2 1.2 7.971-7.971 7.972 7.971 1.2-1.2-8.572-8.571Z"></path>
+					</svg>
+				</button>
+				<button type="button"
+						id="action-button--next"
+						class="action-button--horizontal-scroll">
+					<svg width="16"
+						 height="16"
+						 fill="currentColor"
+						 focusable="false"
+						 viewBox="0 0 24 24">
+						<path d="M12.771 7.115a.829.829 0 0 0-1.2 0L3 15.686l1.2 1.2 7.971-7.971 7.972 7.971 1.2-1.2-8.572-8.571Z"></path>
+					</svg>
+				</button>
+			</div>
+			<div id="events">
+				<a href="#the-weeknd" class="event">
+					<div class="event__image">
+						<img src="https://www.urbanstage.cz/wp-content/uploads/2020/03/weeknd.jpg"
+							 alt="The Weeknd" />
+						<div class="event__indicator event__date">
+							08
+							<div class="event__date__month">Feb</div>
+						</div>
+						<div class="event__indicator event__type">
+							<svg xmlns="http://www.w3.org/2000/svg"
+								 width="24"
+								 height="24"
+								 viewBox="0 0 24 24"
+								 stroke-width="2"
+								 stroke="currentColor"
+								 fill="none"
+								 stroke-linecap="round"
+								 stroke-linejoin="round">
+								<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+								<path d="M15 5l0 2" />
+								<path d="M15 11l0 2" />
+								<path d="M15 17l0 2" />
+								<path d="M5 5h14a2 2 0 0 1 2 2v3a2 2 0 0 0 0 4v3a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-3a2 2 0 0 0 0 -4v-3a2 2 0 0 1 2 -2" />
+							</svg>
+						</div>
+					</div>
+					<div class="event-description">
+						<h2>The Weeknd - After Hours Tour</h2>
+						<div class="bottom-stats">
+							<div class="bottom-stat">
+								<div class="circle circle--red"></div>
+								2 new posts
+							</div>
+							<div class="bottom-stat">
+								<div class="circle circle--green"></div>
+								5 tickets
+							</div>
+						</div>
+					</div>
+				</a>
+				<a href="#the-weeknd" class="event">
+					<div class="event__image">
+						<img src="https://media.architecturaldigest.com/photos/641b2b8252ae61ead67e92d9/16:9/w_2560%2Cc_limit/GettyImages-1474485122.jpg"
+							 alt="The Weeknd" />
+						<div class="event__indicator event__date">
+							16
+							<div class="event__date__month">Feb</div>
+						</div>
+						<div class="event__indicator event__type">
+							<svg xmlns="http://www.w3.org/2000/svg"
+								 width="24"
+								 height="24"
+								 viewBox="0 0 24 24"
+								 stroke-width="2"
+								 stroke="currentColor"
+								 fill="none"
+								 stroke-linecap="round"
+								 stroke-linejoin="round">
+								<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+								<path d="M15 5l0 2" />
+								<path d="M15 11l0 2" />
+								<path d="M15 17l0 2" />
+								<path d="M5 5h14a2 2 0 0 1 2 2v3a2 2 0 0 0 0 4v3a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-3a2 2 0 0 0 0 -4v-3a2 2 0 0 1 2 -2" />
+							</svg>
+						</div>
+					</div>
+					<div class="event-description">
+						<h2>Taylor Swift - Eras Tour</h2>
+						<div class="bottom-stats">
+							<div class="bottom-stat">
+								<div class="circle circle--red"></div>
+								4 new posts
+							</div>
+							<div class="bottom-stat">
+								<div class="circle circle--green"></div>
+								10 tickets
+							</div>
+						</div>
+					</div>
+				</a>
+				<a href="#the-weeknd" class="event">
+					<div class="event__image">
+						<img src="https://fox2now.com/wp-content/uploads/sites/14/2021/09/GettyImages-451833751.jpg?w=1280"
+							 alt="The Weeknd" />
+						<div class="event__indicator event__date">
+							20
+							<div class="event__date__month">Feb</div>
+						</div>
+						<div class="event__indicator event__type">
+							<svg xmlns="http://www.w3.org/2000/svg"
+								 width="24"
+								 height="24"
+								 viewBox="0 0 24 24"
+								 stroke-width="2"
+								 stroke="currentColor"
+								 fill="none"
+								 stroke-linecap="round"
+								 stroke-linejoin="round">
+								<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+								<path d="M15 5l0 2" />
+								<path d="M15 11l0 2" />
+								<path d="M15 17l0 2" />
+								<path d="M5 5h14a2 2 0 0 1 2 2v3a2 2 0 0 0 0 4v3a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-3a2 2 0 0 0 0 -4v-3a2 2 0 0 1 2 -2" />
+							</svg>
+						</div>
+					</div>
+					<div class="event-description">
+						<h2>Imagine Dragons</h2>
+						<div class="bottom-stats">
+							<div class="bottom-stat">
+								<div class="circle circle--red"></div>
+								2 new posts
+							</div>
+							<div class="bottom-stat">
+								<div class="circle circle--green"></div>
+								4 tickets purchased
+							</div>
+						</div>
+					</div>
+				</a>
+				<a href="#the-weeknd" class="event">
+					<div class="event__image">
+						<img src="https://i.dailymail.co.uk/i/pix/2012/10/05/article-2212936-155E4783000005DC-817_1024x615_large.jpg"
+							 alt="The Weeknd" />
+						<div class="event__indicator event__date">
+							28
+							<div class="event__date__month">March</div>
+						</div>
+						<div class="event__indicator event__type">
+							<svg xmlns="http://www.w3.org/2000/svg"
+								 width="24"
+								 height="24"
+								 viewBox="0 0 24 24"
+								 stroke-width="2"
+								 stroke="currentColor"
+								 fill="none"
+								 stroke-linecap="round"
+								 stroke-linejoin="round">
+								<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+								<path d="M15 5l0 2" />
+								<path d="M15 11l0 2" />
+								<path d="M15 17l0 2" />
+								<path d="M5 5h14a2 2 0 0 1 2 2v3a2 2 0 0 0 0 4v3a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-3a2 2 0 0 0 0 -4v-3a2 2 0 0 1 2 -2" />
+							</svg>
+						</div>
+					</div>
+					<div class="event-description">
+						<h2>U2</h2>
+						<div class="bottom-stats">
+							<div class="bottom-stat">
+								<div class="circle circle--red"></div>
+								2 new posts
+							</div>
+							<div class="bottom-stat">
+								<div class="circle circle--green"></div>
+								3 tickets purchased
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+
+		<footer class="vector-group">
+			<img class="frame-child3"
+				 loading="lazy"
+				 alt=""
+				 src="./public/vector-21111.svg" />
+
+			<div class="frame-wrapper11">
+				<div class="cng-ty-tnhh-sunshine-vit-nam-parent">
+					<div class="cng-ty-tnhh-container">
+						<p class="cng-ty-tnhh-sunshine-vit-nam1">
+							<b>CÔNG TY TNHH SunShine VIỆT NAM</b>
+						</p>
+						<p class="blank-line3">
+							<b>&nbsp;</b>
+						</p>
+						<p class="vpd-fpt-university-campus-h">
+							<b>VPĐD</b>
+							<span class="fpt-university-campus">: FPT University, Campus HCM, Q.9, TP. HCM</span>
+						</p>
+						<p class="hotline-0000-0000-830-20">
+							<b class="hotline">Hotline: </b>
+							<span class="t-t2-n">0000-0000 (8:30 - 20:30 từ T2 đến T7)</span>
+						</p>
+						<p class="chu-trch-nhim">
+							Chịu trách nhiệm nội dung: Biên soạn Huỳnh Trọng Nghĩa.
+						</p>
+					</div>
+					<div class="frame-wrapper12">
+						<div class="frame-parent15">
+							<div class="v-sunshine-gii-thiu-v-suns-container">
+								<div class="v-sunshine-gii-container">
+									<p class="v-sunshine">
+										<b>Về SunShine</b>
+									</p>
+									<p class="gii-thiu-v-sunshine-ban-i">
+										<b>&nbsp;</b>
+										<span class="gii-thiu-v">Giới thiệu về SunShine Ban điều hành</span>
+									</p>
+									<p class="nhn-s">Nhân sự & Tuyển dụng</p>
+									<p class="lin-h">Liên hệ</p>
+								</div>
+							</div>
+							<div class="dch-v-t-khm-nha-s-t-kh-parent">
+								<div class="dch-v-t-container">
+									<span class="dch-v-t-container1">
+										<p class="dch-v">
+											<b>Dịch vụ</b>
+										</p>
+										<p class="t-khm-nha-s">
+											<b>&nbsp;</b>
+											<span class="t-khm-nha">Đặt khám nha sĩ</span>
+										</p>
+										<p class="t-khm-theo">Đặt khám theo ca</p>
+										<p class="sunshine-store">SunShine Store</p>
+									</span>
+								</div>
+								<div class="h-tr-iu-container">
+									<p class="h-tr">
+										<b>Hỗ trợ</b>
+									</p>
+									<p class="iu-khon-s-dng">
+										<b>&nbsp;</b>
+										<span class="iu-khon-s">Điều Khoản Sử Dụng</span>
+									</p>
+									<p class="chnh-sch-bo">Chính Sách Bảo Mật</p>
+									<p class="chnh-sch-gii">Chính sách giải quyết khiếu nại</p>
+									<p class="h-tr-khch">Hỗ trợ khách hàng: cskh@sunshine.vn</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
 </html>
